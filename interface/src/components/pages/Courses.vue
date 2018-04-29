@@ -63,6 +63,9 @@ export default {
 }
 </script>
 <style scoped>
+*{
+  font-weight:300 !important;
+}
 h1{
     text-align: center;
 }
@@ -105,7 +108,7 @@ h1{
 }
 .card:hover{
    opacity:0.9;
-   box-shadow:         2px 2px 5px 5px #ccc;  
+   box-shadow:         1px 1px 3px 5px #ccc;  
 }
 
 </style>

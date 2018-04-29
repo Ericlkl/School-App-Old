@@ -25,10 +25,8 @@
         <div class="navbar-end">
           <router-link class="navbar-item col" :to = "{name: 'Courses'}"> Courses </router-link>
          <router-link class="navbar-item col" :to = "{name: 'About'}"> About us </router-link>
-
-          <a class="navbar-item col" href="/blog">
-            Become a tutor
-          </a>
+          <router-link class="navbar-item col" :to = "{name: 'Become'}"> Become a tutor </router-link>
+ 
            <a class="navbar-item col" href="/blog">
             Get a tutor
           </a>
@@ -61,5 +59,10 @@ export default {
   margin-bottom:50px;
   height:100px;
 }
+.is-info{
 
+ 
+ 
+  background: linear-gradient(to right, #00d2ff, #167df0); 
+}
 </style>

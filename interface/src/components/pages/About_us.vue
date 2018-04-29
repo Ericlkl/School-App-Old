@@ -1,6 +1,6 @@
 <template>
   <div>
-      <Navbar></Navbar>
+      <Navbar class="nav"></Navbar>
       <div class="main-content">
           <div class="flex-img-txt">
                   <img src="http://cdn.playbuzz.com/cdn/7aa950b4-eaa0-417d-93af-3bd332dc8086/dec8c31c-3c84-4ae3-b8e1-ba6f1da345d1_560_420.jpg">
@@ -28,6 +28,12 @@ export default {
 }
 </script>
 <style scoped>
+.nav{
+    margin-top:00px;
+}
+*{
+  font-weight:300 !important;
+}
 .main-content{
     max-width: 1024px;
     margin: 0 auto;

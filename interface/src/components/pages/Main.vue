@@ -2,7 +2,17 @@
   <div>
       <Navbar></Navbar>
       <div class="main-content">
-          
+           <div class="main_image">
+      <Nav></Nav>
+      <div class="text">
+        <h1 class="subtitle is-3">Learn more. Achieve more.<br></h1>
+        <hr class="line">
+        <h3 class="subtitle is-5" style="color:#fff">Get best music lessons available out there</h3>
+      </div>
+
+
+
+    </div>
    
     <div class="each img-sup" id="benefits">
       <div class="after_image  row">
@@ -115,10 +125,58 @@ export default {
 }
 </script>
 <style scoped>
+*{
+  font-weight:300 !important;
+}
+  .text h1 {
+    color: rgba(236, 240, 241, 1.0);
+    font-weight: 100 !important;
+    font-size: 160%;
+  }
+    .line {
+    width: 30%;
+    margin: 0 auto;
+    height: 2px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    background-color: rgba(236, 240, 241, 1.0);
+  }
+
+
+  .text {
+    text-align: center;
+    position: relative;
+    float: left;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    word-spacing: 5px;
+    
+  }
+
+  .main_image {
+   background: #00d2ff; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #00d2ff, #167df0); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #00d2ff, #167df0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    /* Chrome 10-25, Safari 5.1-6 */
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+
+    background-attachment: fixed;
+    display: grid;
+    grid-template-columns: repeat(12);
+  }
+
+
 
 .main-content{
     margin-top:-60px;
-   
+    
    
 }
 
@@ -146,6 +204,7 @@ export default {
 
   .section {
     margin-bottom: 35px;
+    
   }
 
   .each {
