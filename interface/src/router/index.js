@@ -34,6 +34,11 @@ export default new Router({
       component: AsyncRoute('pages/About_us')
     },
     {
+      path: '/getTutor',
+      name: 'getTutor',
+      component: AsyncRoute('pages/Get_tutor')
+    },
+    {
       path: '/becomeTutor',
       name: 'Become',
       component: AsyncRoute('pages/Become_tutor')

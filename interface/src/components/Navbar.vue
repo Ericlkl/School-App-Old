@@ -26,10 +26,8 @@
           <router-link class="navbar-item col" :to = "{name: 'Courses'}"> Courses </router-link>
          <router-link class="navbar-item col" :to = "{name: 'About'}"> About us </router-link>
           <router-link class="navbar-item col" :to = "{name: 'Become'}"> Become a tutor </router-link>
- 
-           <a class="navbar-item col" href="/blog">
-            Get a tutor
-          </a>
+          <router-link class="navbar-item col" :to = "{name: 'getTutor'}"> Get a tutor </router-link>
+
            <a class="navbar-item col" href="/blog">
             Login
           </a>
