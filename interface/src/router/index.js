@@ -26,16 +26,22 @@ google Bulma or buefy to make the layout.
 Good luck :)    
 
 */
-
+//importing router
 Vue.use(Router)
 
 export default new Router({
+  //to remove hashes from history
   mode: 'history',
+  //establishing routes
   routes: [{
+    //this is the path that is accessed from browser
       path: '/',
+      //name to allow acces fromm a tags or (router-link) tags
       name: 'Introduction',
+      //lazy loadings
       component: AsyncRoute('pages/Main')
     },
+    //the process repeats itself over and over
     {
       path: '/events',
       name: 'events',
