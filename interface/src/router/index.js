@@ -23,7 +23,7 @@ const AsyncRoute = name => resolve => ({
 
 google Bulma or buefy to make the layout.
 
-Good luck :)
+Good luck :)    
 
 */
 

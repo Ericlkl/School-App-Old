@@ -7,7 +7,7 @@
       <div class="text">
         <h1 class="subtitle is-3">Learn more. Achieve more.<br></h1>
         <hr class="line">
-        <h3 class="subtitle is-5" style="color:#fff">Get best music lessons available out there</h3>
+        <h3 class="subtitle is-5" style="color:#fff">Get the best music lessons </h3>
       </div>
 
 
