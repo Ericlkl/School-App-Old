@@ -2,7 +2,7 @@
   <div>
       <Navbar class="nav"></Navbar>
       <div class="main-content">
-          Get tutor
+          Contact us
       </div>
       <Footer></Footer>
   </div>

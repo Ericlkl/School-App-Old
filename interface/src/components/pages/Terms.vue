@@ -2,7 +2,7 @@
   <div>
       <Navbar class="nav"></Navbar>
       <div class="main-content">
-          Get tutor
+          Terms of use
       </div>
       <Footer></Footer>
   </div>
