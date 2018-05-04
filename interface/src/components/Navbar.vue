@@ -1,6 +1,6 @@
 <template>
   <div>
-   
+
 
   <!-- Hero header: will stick at the top -->
   <div class="hero-head">
@@ -25,6 +25,7 @@
         <div class="navbar-end">
           <router-link class="navbar-item col" :to = "{name: 'Courses'}"> Courses </router-link>
           <router-link class="navbar-item col" :to = "{name: 'events'}"> Events </router-link>
+          <router-link class="navbar-item col" :to = "{name: 'contact'}"> Contact Us </router-link>
          <router-link class="navbar-item col" :to = "{name: 'About'}"> About us </router-link>
           <router-link class="navbar-item col" :to = "{name: 'Become'}"> Become a tutor </router-link>
           <router-link class="navbar-item col" :to = "{name: 'getTutor'}"> Get a tutor </router-link>
@@ -50,7 +51,7 @@ export default {
             showNav: false
         }
     }
-  
+
 }
 </script>
 <style scoped>
@@ -60,8 +61,8 @@ export default {
 }
 .is-info{
 
- 
- 
-  background: linear-gradient(to right, #00d2ff, #167df0); 
+
+
+  background: linear-gradient(to right, #00d2ff, #167df0);
 }
 </style>
