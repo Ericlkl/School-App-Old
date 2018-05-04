@@ -2,7 +2,6 @@
   <div>
       <Navbar class="nav"></Navbar>
       <div class="main-content">
-          Contact us
       </div>
       <Footer></Footer>
   </div>
@@ -14,7 +13,7 @@ import Navbar from '../Navbar'
 export default {
     components:{
         Footer,
-        Navbar
+        Navbar,
     }
   
 }

@@ -26,6 +26,7 @@ google Bulma or buefy to make the layout.
 Good luck :)    
 
 */
+
 //importing router
 Vue.use(Router)
 

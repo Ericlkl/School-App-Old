@@ -24,6 +24,7 @@
       <div class="navbar-menu" :class="{ 'is-active': showNav }">
         <div class="navbar-end">
           <router-link class="navbar-item col" :to = "{name: 'Courses'}"> Courses </router-link>
+          <router-link class="navbar-item col" :to = "{name: 'events'}"> Events </router-link>
          <router-link class="navbar-item col" :to = "{name: 'About'}"> About us </router-link>
           <router-link class="navbar-item col" :to = "{name: 'Become'}"> Become a tutor </router-link>
           <router-link class="navbar-item col" :to = "{name: 'getTutor'}"> Get a tutor </router-link>
