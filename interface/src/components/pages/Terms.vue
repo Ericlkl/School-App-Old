@@ -80,6 +80,7 @@
       <Footer/>
   </div>
 </template>
+
 <script>
 import Footer from '../Footer'
 import Navbar from '../Navbar'
@@ -92,6 +93,7 @@ export default {
   
 }
 </script>
+
 <style scoped>
 .page{
     background-color: rgb(244, 249,253);
