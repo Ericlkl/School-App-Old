@@ -1,20 +1,31 @@
 <template>
   <div>
-      <Navbar class="nav"></Navbar>
-      <div class="main-content">
-          teacher profile
+      <Navbar class="nav" />
+      <div class="container">
+          <div class="columns">
+              <div class="column is-4">
+                  <TeacherProfile/>
+              </div>
+              <div class="column is-8">
+                  <TeacherDescription/>
+              </div>
+          </div>
       </div>
-      <Footer></Footer>
+      <Footer/>
   </div>
 </template>
 <script>
+
 import Footer from '../Footer'
 import Navbar from '../Navbar'
-
+import TeacherDescription from '../TeacherComponent/TeacherDescription.vue'
+import TeacherProfile from '../TeacherComponent/TeacherProfile.vue'
 export default {
     components:{
         Footer,
-        Navbar
+        Navbar,
+        TeacherProfile,
+        TeacherDescription
     }
   
 }

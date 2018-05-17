@@ -1,8 +1,11 @@
 <template>
-  <div>
+  <div class="page">
       <Navbar />
       <div class="container">
-        <div class="content">
+      <div class="columns">
+      <div class="column is-2"></div>
+      <div class="column is-8 ">
+        <div class="content ">
           <h1>Terms and Conditions ("Terms")</h1>
             <p>Last updated: May 17, 2018</p>
 
@@ -70,6 +73,8 @@
             <h2>Contact Us</h2>
             <p>If you have any questions about these Terms, please contact us.</p>
         </div>
+        </div>
+        </div>
       </div>
 
       <Footer/>
@@ -88,5 +93,7 @@ export default {
 }
 </script>
 <style scoped>
-
+.page{
+    background-color: rgb(244, 249,253);
+}
 </style>

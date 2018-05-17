@@ -23,8 +23,6 @@ const AsyncRoute = name => resolve => ({
 
 google Bulma or buefy to make the layout.
 
-get_tutor is improved! 
-
 Good luck :)    
 
 */
