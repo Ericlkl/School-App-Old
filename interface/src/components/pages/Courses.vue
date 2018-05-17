@@ -5,45 +5,61 @@
       <div class="main-content">
          <h1 class="subtitle is-1">Choose the courses you like</h1>
           <div class="flex-cards">
+        
           <div class = "card">
+            <router-link :to = "{name: 'specific'}">
                 <img src="https://cdn.shopify.com/s/files/1/1710/1447/products/Violin9.jpeg?v=1521557750">
                 <div class="text">
                     <h4>Learn how to play on Violin</h4>
                     <p>By John Smith</p>
                     
                 </div>
-          </div>
-           <div class = "card">
-                <img src="https://cdn.shopify.com/s/files/1/1710/1447/products/Violin9.jpeg?v=1521557750">
-                <div class="text">
-                    <h4>Learn how to play on Violin</h4>
-                    <p>By John Smith</p>
-                </div>
-          </div>
-           <div class = "card">
-                <img src="https://cdn.shopify.com/s/files/1/1710/1447/products/Violin9.jpeg?v=1521557750">
-                <div class="text">
-                    <h4>Learn how to play on Violin</h4>
-                    <p>By John Smith</p>
-                </div>
-          </div>
-           <div class = "card">
-                <img src="https://cdn.shopify.com/s/files/1/1710/1447/products/Violin9.jpeg?v=1521557750">
-                <div class="text">
-                    <h4>Learn how to play on Violin</h4>
-                    <p>By John Smith</p>
-                </div>
-          </div>
-            
-          <div class = "card">
-                <img src="https://cdn.shopify.com/s/files/1/1710/1447/products/Violin9.jpeg?v=1521557750">
-                <div class="text">
-                    <h4>Learn how to play on Violin</h4>
-                    <p>By John Smith</p>
-                </div>
+            </router-link>
           </div>
 
+
+          <div class = "card">
+            <router-link :to = "{name: 'specific'}">
+                <img src="https://cdn.shopify.com/s/files/1/1710/1447/products/Violin9.jpeg?v=1521557750">
+                <div class="text">
+                    <h4>Learn how to play on Violin</h4>
+                    <p>By John Smith</p>    
+                </div>
+            </router-link>
           </div>
+        
+        <div class = "card">
+            <router-link :to = "{name: 'specific'}">
+                <img src="https://cdn.shopify.com/s/files/1/1710/1447/products/Violin9.jpeg?v=1521557750">
+                <div class="text">
+                    <h4>Learn how to play on Violin</h4>
+                    <p>By John Smith</p>
+                </div>
+            </router-link>
+          </div>
+
+        <div class = "card">
+            <router-link :to = "{name: 'specific'}">
+                <img src="https://cdn.shopify.com/s/files/1/1710/1447/products/Violin9.jpeg?v=1521557750">
+                <div class="text">
+                    <h4>Learn how to play on Violin</h4>
+                    <p>By John Smith</p>
+                </div>
+            </router-link>
+          </div>
+
+        <div class = "card">
+            <router-link :to = "{name: 'specific'}">
+                <img src="https://cdn.shopify.com/s/files/1/1710/1447/products/Violin9.jpeg?v=1521557750">
+                <div class="text">
+                    <h4>Learn how to play on Violin</h4>
+                    <p>By John Smith</p>
+                    
+                </div>
+            </router-link>
+          </div>
+
+        </div>
 
           
       </div>
