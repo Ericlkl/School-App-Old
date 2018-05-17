@@ -15,13 +15,15 @@ const AsyncRoute = name => resolve => ({
 //TO ERIC
 //PAGES TO DEVELOP CAN BE ACCESSED FROM
 /*
-    1) http://localhost:8080/terms (NOT DONE)  ---> make the terms of service
+    1) http://localhost:8080/terms (Eric: DONE)  ---> make the terms of service
     2) http://localhost:8080/teacherProfile (NOT DONE)   ---> the layour for teachers profile teacher.vue
     3) http://localhost:8080/Contact   ---> (Eric:UI Finished) contact us page
     4) http://localhost:8080/course-specific  (Eric: UI Finished )---> specific.vue this is the page when a user presses on the course itself from "Courses"
     5) http://localhost:8080/userProfile  (STAS)---> user profile, must be able to edit data, like email DOB, name etc.
 
 google Bulma or buefy to make the layout.
+
+get_tutor is improved! 
 
 Good luck :)    
 
@@ -70,7 +72,7 @@ export default new Router({
     },
     {
       path: '/teacherProfile',
-      name: 'teachProfile',
+      name: 'teacherProfile',
       component: AsyncRoute('pages/Teacher')
     },
     {

@@ -42,11 +42,11 @@
 
 import Footer from '../Footer'
 import Navbar from '../Navbar'
-import Requirementbox from './CourseSpecificComponent/RequirementBox.vue'
-import Coursebox from './CourseSpecificComponent/CourseBox.vue'
-import Descriptionbox from './CourseSpecificComponent/DescriptionBox.vue'
-import Tutionbox from './CourseSpecificComponent/TutionBox.vue'
-import EnrolForm from './CourseSpecificComponent/EnrolForm.vue'
+import Requirementbox from '../CourseSpecificComponent/RequirementBox.vue'
+import Coursebox from '../CourseSpecificComponent/CourseBox.vue'
+import Descriptionbox from '../CourseSpecificComponent/DescriptionBox.vue'
+import Tutionbox from '../CourseSpecificComponent/TutionBox.vue'
+import EnrolForm from '../CourseSpecificComponent/EnrolForm.vue'
 
 export default {
     components:{
