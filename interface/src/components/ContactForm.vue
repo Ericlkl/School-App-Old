@@ -1,37 +1,77 @@
 <template>
-
     <section>
-        <b-field label="Name*">
-            <b-input v-model="name"></b-input>
-        </b-field>
+        <!-- Full name input field -->
+        <div class="field">
+        <label class="label">Full Name*</label>
+        <div class="control has-icons-left has-icons-right">
+            <input class="input" type="text" placeholder="E.g Burce Wayne" v-model="fullname">
+            <span class="icon is-small is-left">
+            <i class="fas fa-user"></i>
+            </span>
+            <span class="icon is-small is-right">
+            <i class="fas fa-check"></i>
+            </span>
+        </div>
+        </div>
 
-        <b-field label="Email*"
-            message="">
-            <b-input type="email"
-                value=""
-                maxlength="30">
-            </b-input>
-        </b-field>
-        
-        <b-field label="Phone"
-            type=""
-            message="">
-            <b-input value="+61 " maxlength="30"></b-input>
-        </b-field>
+        <!-- Email input field -->
+        <div class="field">
+        <label class="label">Email*</label>
+        <div class="control has-icons-left has-icons-right">
+            <input class="input" type="text" placeholder="Abc@email.com" v-model="email">
+            <span class="icon is-small is-left">
+            <i class="fas fa-user"></i>
+            </span>
+            <span class="icon is-small is-right">
+            <i class="fas fa-check"></i>
+            </span>
+        </div>
+        </div>
 
-        <b-field label="Message*">
-            <b-input maxlength="200" type="textarea"></b-input>
-        </b-field>
+        <!-- Phone number text field -->
+        <div class="field">
+        <label class="label">Phone Number*</label>
+        <div class="control has-icons-left has-icons-right">
+            <input class="input" type="text" v-model="phonenumber">
+        </div>
+        </div>
 
-        <button class='button is-warning is-rounded'>Send</button>
+        <div class="field">
+        <div class="control">
+            <textarea class="textarea is-success" type="text" v-model="message" placeholder="Success textarea"></textarea>
+        </div>
+        </div>
+
+        <button @click="uploadQuestion" class='button is-warning is-rounded'>Send</button>
         </section>
 </template>
 
 <script>
+
+import Application from '../services/Application'
+// const Application  = require('../services/Application')
     export default {
         data() {
             return {
-                
+                fullname: '',
+                phonenumber: 61,
+                email: '',
+                message: '',
+                error: null
+            }
+        },
+        methods : {
+            async uploadQuestion() {
+                try {
+                    const response = await Application.submitQuestion({
+                        FullName : this.fullname,
+                        Email: this.email,
+                        PhoneNumber: this.phonenumber,
+                        Message: this.message
+                    })
+                } catch (error){
+                    this.error = error.response.data.error
+                }
             }
         }
     }

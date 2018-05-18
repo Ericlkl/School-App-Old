@@ -1,4 +1,6 @@
 const {User} = require('../models')
+const {Teacher} = require('../models')
+const {Question} = require('../models')
 
 module.exports = {
   async register (req, res) {
@@ -11,6 +13,7 @@ module.exports = {
       })
     }
   },
+
   async login (req, res) {
     try {
       const {email, password} = req.body
@@ -43,5 +46,31 @@ module.exports = {
         error: 'An error has occured trying to log in'
       }) // end of error msg
     } // end of the catch block
+  },
+
+  async teacher_register (req, res) {
+    try {
+      const teacher = await Teacher.create(req.body)
+      res.send(teacher.toJSON())
+    } catch (err) {
+      console.log(err)
+      // any insert error occur will show in here
+      res.status(400).send({
+        error: 'This Teacher is already in database.'
+      })
+    }
+  },
+
+  async leave_question (req, res) {
+    try {
+      const question = await Question.create(req.body)
+      res.send(question.toJSON())
+    } catch (err) {
+      console.log(err)
+      // any insert error occur will show in here
+      res.status(400).send({
+        error: 'Something wrong with leave question'
+      })
+    }
   }
 }

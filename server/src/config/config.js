@@ -1,5 +1,5 @@
 module.exports = {
-  port: process.env.PORT || 8080,
+  port: process.env.PORT || 8081,
   db: {
     //                      To Stas
     // Warning !!! you need to run the mysql templete first!!
