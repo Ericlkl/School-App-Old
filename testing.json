@@ -1,5 +1,6 @@
     // Useless Sheet, just only for testing the app don't delete it
-    // Tutor
+
+    // Tutor information
 {
     "FirstName": "Glennys",
     "LastName": "Looker",
@@ -51,7 +52,7 @@
     "Image_URL": "https://media.apnarm.net.au/media/images/2016/05/02/b88110857z1_20160502153202_000ge55bbe13-0-erx6eq7q8wmv56g15m2_fct609x453x93_ct677x380.jpg"
 }
 
-// Event
+// Event information
 {
     "EventName": "Brisbane Student Piano concert 2018",
     "Tag": "BSPC_2018",
@@ -100,6 +101,7 @@
     "Image_URL": "https://www.tso.ca/sites/default/files/lures/tchaik-violin-concerto_1920x1080.jpg"
 }
 
+// Course information
 
 {
     "CourseName": "Piano Beginner 1",

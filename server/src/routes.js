@@ -1,9 +1,20 @@
+// Sequelize function for submit question to database
 const QuestionController = require('./controllers/QuestionController')
+// Sequelize function for insert teacher information to DB or get information from DB
 const TeacherController = require('./controllers/TeacherController')
+// Sequelize function for insert Event information to DB or get information from DB
 const EventController = require('./controllers/EventController')
+// Sequelize function for insert Course information to DB or get information from DB
 const CourseController = require('./controllers/CourseController')
 
 module.exports = (app) => {
+
+  /*
+     To Stas, Those insert_xxx route is made for insert data to DB easily
+     You can copy the json from testing.json file in the root folder
+     to post the information using postman, to test the page
+  */
+
   // route for contact us page to submit their question to the database
   app.post('/contact', QuestionController.leave_question)
 

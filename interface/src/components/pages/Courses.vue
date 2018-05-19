@@ -17,6 +17,7 @@ import Footer from '../Footer'
 import Navbar from '../Navbar'
 import CourseCard from '../CourseComponent/CourseCard'
 import Connection from '../../services/Connection'
+
 export default {
     components:{
         Footer,
