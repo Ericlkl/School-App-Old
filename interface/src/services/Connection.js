@@ -9,5 +9,8 @@ export default {
     },
     getTutorsInfo(){
         return Api().get('show_tutors')
+    },
+    getEventsInfo(){
+        return Api().get('show_events')
     }
 }

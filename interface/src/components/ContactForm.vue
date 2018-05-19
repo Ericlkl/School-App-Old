@@ -52,8 +52,8 @@
 
 <script>
 
-import Application from '../services/Application'
-// const Application  = require('../services/Application')
+import Connection from '../services/Connection'
+
     export default {
         data() {
             return {
@@ -67,7 +67,7 @@ import Application from '../services/Application'
         methods : {
             async uploadQuestion() {
                 try {
-                    const response = await Application.submitQuestion({
+                    const response = await Connection.submitQuestion({
                         FullName : this.fullname,
                         Email: this.email,
                         PhoneNumber: this.phonenumber,

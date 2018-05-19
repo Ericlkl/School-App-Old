@@ -2,13 +2,13 @@
   <div>
       <Navbar class="nav"/>
       <div class="container">
-          
+
         <!-- correct Answer -->
         <div v-for = "n in num_of_tutors" >
             <div v-if = "n === 1 || (n - 1) % 3 === 0" class="columns">
-                <div v-if="num_of_tutors - n >= 0" class="column is-4"> <TeacherCard :tutor="received.tutorList[n]"/></div>
-                <div v-if="num_of_tutors - n - 1 >= 0 " class="column is-4"> <TeacherCard :tutor="received.tutorList[n - 1]"/></div>
-                <div v-if="num_of_tutors - n - 2 >= 0 " class="column is-4"> <TeacherCard :tutor="received.tutorList[n - 2]"/></div>
+                <div v-if="num_of_tutors - n >= 0" class="column is-4"> <TeacherCard :tutor="received.tutorList[n - 1]"/></div>
+                <div v-if="num_of_tutors - n - 1 >= 0 " class="column is-4"> <TeacherCard :tutor="received.tutorList[n]"/></div>
+                <div v-if="num_of_tutors - n - 2 >= 0 " class="column is-4"> <TeacherCard :tutor="received.tutorList[n + 1]"/></div>
             </div>
         </div>
 
@@ -21,7 +21,7 @@
 import Footer from '../Footer'
 import Navbar from '../Navbar'
 import TeacherCard from '../TeacherComponent/TeacherCard.vue'
-import Application from '../../services/Application'
+import Connection from '../../services/Connection'
 
 export default {
     components:{
@@ -39,9 +39,10 @@ export default {
         async getInfo() {
             try {
                 // get the teacher information from Teacher Table
-                this.received.tutorList = (await Application.getTutorsInfo()).data
+                this.received.tutorList = (await Connection.getTutorsInfo()).data
                 // calculate how many teacher do we have
                 this.num_of_tutors = this.received.tutorList.length
+                console.log(this.received.tutorList)
             } catch (error){
                 console.log(error)
             }
