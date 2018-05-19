@@ -71,7 +71,7 @@
         <div class="control">
             <label class="checkbox">
             <input type="checkbox">
-            I have read and agree to the <a href="#">terms and conditions</a>
+            I have read and agree to the <router-link :to = "{name: 'terms'}">terms and conditions</router-link>
             </label>
         </div>
         </div>

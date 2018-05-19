@@ -22,11 +22,27 @@ module.exports = (sequelize, DataTypes) => {
     },
     Email: {
       type: DataTypes.STRING,
-      unique: true
+      unique: true,
+      allowNull: false
     },
+
     Facebook_ID: DataTypes.STRING,
+
     Qualification: {
       type: DataTypes.ENUM('Diploma', 'Bachelor', 'Master'),
+      allowNull: false
+    },
+
+    Good_at: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    Personal_Description: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    Teachering_Experience: {
+      type: DataTypes.STRING,
       allowNull: false
     },
     Music_skill: {
@@ -34,6 +50,10 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false
     },
     Language_skill: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    Image_URL: {
       type: DataTypes.STRING,
       allowNull: false
     }

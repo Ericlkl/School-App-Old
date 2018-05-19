@@ -1,11 +1,8 @@
 module.exports = {
   port: process.env.PORT || 8081,
   db: {
-    //                      To Stas
-    // Warning !!! you need to run the mysql templete first!!
-    // It is not Creating Database, it just only connect to it!
-    // Therefore, run the sql file in IFB299-Project file in mysql Workbench first
-    database: process.env.DB_NAME || 'Pineland_Music_School',
+    database: process.env.DB_NAME || 'pineland_music_school',
+    // To Stas
     // you might need to change the user name to use it
     // Insert your mySql database user name, normally it is root
     user: process.env.DB_USER || 'root',

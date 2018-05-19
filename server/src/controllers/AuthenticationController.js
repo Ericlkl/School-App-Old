@@ -14,6 +14,29 @@ module.exports = {
     }
   },
 
+  async insert_Teacher (req, res) {
+    try {
+      const teacher = await Teacher.create(req.body)
+      res.send(teacher.toJSON())
+    } catch (err) {
+      res.status(400).send({
+        error: 'This Teacher Account is already in Use.'
+      })
+    }
+  },
+
+  async select_all_teacher (req, res) {
+    try {
+      const teacher = await Teacher.findAll()
+      res.send(teacher)
+    } catch (err) {
+      console.log(err)
+      res.status(400).send({
+        error: 'Error.'
+      })
+    }
+  },
+
   async login (req, res) {
     try {
       const {email, password} = req.body
@@ -46,19 +69,6 @@ module.exports = {
         error: 'An error has occured trying to log in'
       }) // end of error msg
     } // end of the catch block
-  },
-
-  async teacher_register (req, res) {
-    try {
-      const teacher = await Teacher.create(req.body)
-      res.send(teacher.toJSON())
-    } catch (err) {
-      console.log(err)
-      // any insert error occur will show in here
-      res.status(400).send({
-        error: 'This Teacher is already in database.'
-      })
-    }
   },
 
   async leave_question (req, res) {

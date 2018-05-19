@@ -6,5 +6,8 @@ export default {
     },
     submitQuestion(credentials){
         return Api().post('contact', credentials)
+    },
+    getTutorsInfo(){
+        return Api().get('show_tutors')
     }
 }

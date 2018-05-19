@@ -1,5 +1,8 @@
 <template>
     <section>
+        <div class="content">
+        <h1>Any Question?</h1>
+        <p>We value your comments and feedback to help us improve and be better at what we do</p>
         <!-- Full name input field -->
         <div class="field">
         <label class="label">Full Name*</label>
@@ -43,6 +46,7 @@
         </div>
 
         <button @click="uploadQuestion" class='button is-warning is-rounded'>Send</button>
+        </div>
         </section>
 </template>
 
