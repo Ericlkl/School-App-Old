@@ -1,3 +1,4 @@
+    // Useless Sheet, just only for testing the app don't delete it
     // Tutor
 {
     "FirstName": "Glennys",
@@ -58,6 +59,7 @@
     "Description": "Brisbane Student Pinao Concert 2018 has more than 200 student to show their pinao skills....",
     "Time": "08:00 PM",
     "Place": "Brisbane",
+    "Instrument": "Piano",
     "Date": "1 May 2018",
     "Image_URL": "http://pastimesinc.com/wp-content/uploads/2015/07/Student_Concerts-Final-1024x689.jpg"
 }
@@ -69,6 +71,7 @@
     "Description": "SouthBank Centre present close to 200 concerts a year alongside free events and more from the most exciting artists, conductors, orchestras and ensembles the world over. ",
     "Time": "07:30 PM",
     "Place": "SouthBank",
+    "Instrument": "Band",
     "Date": "7 May 2018",
     "Image_URL": "http://media.socastsrm.com/wordpress/wp-content/blogs.dir/668/files/2016/10/JR-ConcertsAndEvents.jpg"
 }
@@ -80,6 +83,7 @@
     "Description": "As YUNDI travels through Japan and China this summer performing Chopin's Ballades and 24 Preludes, follow his activities on and off the recital stage on Facebook and Twitter at @yundimusic and on Instagram at @yundimusicofficial",
     "Time": "06:30 PM",
     "Place": "Sydney",
+    "Instrument": "Piano",
     "Date": "27 Aug 2018",
     "Image_URL": "https://onrichmondhill.com/sites/default/files/Chris%20Au%20on%20piano.jpg"
 }
@@ -91,6 +95,65 @@
     "Description": "This concert commemorates those who lost their lives in Great East Japan earthquake and tsunami on 11 March 2011. It is a reminder that many people are still suffering from the disaster, and that we could still be of some help.",
     "Time": "10:00 PM",
     "Place": "Melbourne",
+    "Instrument": "Violin",
     "Date": "12 Aug 2018",
     "Image_URL": "https://www.tso.ca/sites/default/files/lures/tchaik-violin-concerto_1920x1080.jpg"
 }
+
+
+{
+    "CourseName": "Piano Beginner 1",
+    "Description": "Best entry for the complete beginner to learn how to play piano",
+    "Requirement": "age 12 above",
+    "TutionFee": 300,
+    "Period": "April - July",
+    "Time": "09:00 PM",
+    "Day": "Tuesday",
+    "NumbersOfStudent": 24,
+    "Instrument": "Piano",
+    "Teacher": "Eric lee",
+    "Image_URL": "https://s3.envato.com/files/142848884/2.jpg"
+}
+
+{
+    "CourseName": "Violin Beginner 1",
+    "Description": "Best entry for the complete beginner to learn how to play piano",
+    "Requirement": "age 6 above",
+    "TutionFee": 400,
+    "Period": "20 April - 27 July",
+    "Time": "07:00 PM",
+    "Day": "Wednesday",
+    "NumbersOfStudent": 20,
+    "Instrument": "Violin",
+    "Teacher": "Emma Lu",
+    "Image_URL": "https://cruciality.files.wordpress.com/2009/05/violin.jpg"
+}
+
+{
+    "CourseName": "Drum Beginner 1",
+    "Description": "Best entry for the complete beginner to learn how to play Drum",
+    "Requirement": "age 14 above",
+    "TutionFee": 800,
+    "Period": "20 Sep - 27 Oct",
+    "Time": "07:00 PM",
+    "Day": "Monday",
+    "NumbersOfStudent": 10,
+    "Instrument": "Drum",
+    "Teacher": "Stas",
+    "Image_URL": "https://usa.yamaha.com/files/model_visual_2f724798d647fa144cae0fd8b1685490.jpg"
+}
+
+{
+    "CourseName": "Guitar Beginner 2",
+    "Description": "Best entry for the complete beginner to learn how to play Guitar",
+    "Requirement": "age 12 above",
+    "TutionFee": 600,
+    "Period": "20 Sep - 27 Oct",
+    "Time": "08:00 PM",
+    "Day": "Tuesday",
+    "NumbersOfStudent": 10,
+    "Instrument": "Guitar",
+    "Teacher": "Jesses",
+    "Image_URL": "https://www.pmtonline.co.uk/yoma_press/wp-content/uploads/2017/12/10-reasons-you-need-a-taylor-guitar.jpg"
+}
+

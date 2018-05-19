@@ -3,7 +3,6 @@
       <Navbar class="nav"/>
       <div class="container">
 
-        <!-- correct Answer -->
         <div v-for = "n in num_of_tutors" >
             <div v-if = "n === 1 || (n - 1) % 3 === 0" class="columns">
                 <div v-if="num_of_tutors - n >= 0" class="column is-4"> <TeacherCard :tutor="received.tutorList[n - 1]"/></div>

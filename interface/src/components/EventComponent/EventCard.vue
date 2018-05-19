@@ -18,7 +18,7 @@
     <div class="content">
      {{event.Description}}...
         <a>@{{event.Place}}</a>
-        <a href="#">#Piano</a> <a href="#">#{{event.Company}}</a>
+        <a href="#">#{{event.Instrument}}</a> <a href="#">#{{event.Company}}</a>
         <br>
         <time datetime="2016-1-1">{{event.Time}} - {{event.Date}}</time>
         </div>

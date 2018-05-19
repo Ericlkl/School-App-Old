@@ -1,14 +1,6 @@
 module.exports = (sequelize, DataTypes) => {
-  const Event = sequelize.define('Event', {
-    EventName: {
-      type: DataTypes.STRING,
-      allowNull: false
-    },
-    Tag: {
-      type: DataTypes.STRING,
-      allowNull: false
-    },
-    Company: {
+  const course = sequelize.define('Course', {
+    CourseName: {
       type: DataTypes.STRING,
       allowNull: false
     },
@@ -16,11 +8,15 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING,
       allowNull: false
     },
-    Instrument: {
+    Requirement: {
       type: DataTypes.STRING,
       allowNull: false
     },
-    Place: {
+    TutionFee: {
+      type: DataTypes.INTEGER,
+      allowNull: false
+    },
+    Period: {
       type: DataTypes.STRING,
       allowNull: false
     },
@@ -28,7 +24,19 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING,
       allowNull: false
     },
-    Date: {
+    Day: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    NumbersOfStudent: {
+      type: DataTypes.INTEGER,
+      allowNull: false
+    },
+    Instrument: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    Teacher: {
       type: DataTypes.STRING,
       allowNull: false
     },
@@ -39,5 +47,5 @@ module.exports = (sequelize, DataTypes) => {
   }, {
     timestamps: false
   })
-  return Event
+  return course
 }

@@ -1,84 +1,58 @@
 <template>
   <div>
-      <Navbar></Navbar>
+      <Navbar/>
       
       <div class="main-content">
          <h1 class="subtitle is-1">Choose the courses you like</h1>
           <div class="flex-cards">
-        
-          <div class = "card">
-            <router-link :to = "{name: 'specific'}">
-                <img src="https://cdn.shopify.com/s/files/1/1710/1447/products/Violin9.jpeg?v=1521557750">
-                <div class="text">
-                    <h4>Learn how to play on Violin</h4>
-                    <p>By John Smith</p>
-                    
-                </div>
-            </router-link>
-          </div>
-
-
-          <div class = "card">
-            <router-link :to = "{name: 'specific'}">
-                <img src="https://cdn.shopify.com/s/files/1/1710/1447/products/Violin9.jpeg?v=1521557750">
-                <div class="text">
-                    <h4>Learn how to play on Violin</h4>
-                    <p>By John Smith</p>    
-                </div>
-            </router-link>
-          </div>
-        
-        <div class = "card">
-            <router-link :to = "{name: 'specific'}">
-                <img src="https://cdn.shopify.com/s/files/1/1710/1447/products/Violin9.jpeg?v=1521557750">
-                <div class="text">
-                    <h4>Learn how to play on Violin</h4>
-                    <p>By John Smith</p>
-                </div>
-            </router-link>
-          </div>
-
-        <div class = "card">
-            <router-link :to = "{name: 'specific'}">
-                <img src="https://cdn.shopify.com/s/files/1/1710/1447/products/Violin9.jpeg?v=1521557750">
-                <div class="text">
-                    <h4>Learn how to play on Violin</h4>
-                    <p>By John Smith</p>
-                </div>
-            </router-link>
-          </div>
-
-        <div class = "card">
-            <router-link :to = "{name: 'specific'}">
-                <img src="https://cdn.shopify.com/s/files/1/1710/1447/products/Violin9.jpeg?v=1521557750">
-                <div class="text">
-                    <h4>Learn how to play on Violin</h4>
-                    <p>By John Smith</p>
-                    
-                </div>
-            </router-link>
-          </div>
-
-        </div>
-
-          
+                 <CourseCard v-for = "x in num_of_Event" :event="received.courseList[x-1]" />
+          </div>     
       </div>
-      <Footer></Footer>
+      <Footer/>
   </div>
 </template>
+
 <script>
 import Footer from '../Footer'
 import Navbar from '../Navbar'
-
+import CourseCard from '../CourseComponent/CourseCard'
+import Connection from '../../services/Connection'
 export default {
     components:{
         Footer,
-        Navbar
+        Navbar,
+        CourseCard
+    },
+    data() {
+      return {
+        received: {},
+        num_of_Event: 0
+      }
+    },
+    methods: {
+      async getInfo() {
+          try {
+            this.received.courseList = (await Connection.getCoursesInfo() ).data
+            this.num_of_Event = this.received.courseList.length
+            console.log(this.received.courseList)
+          } catch(error){
+            console.log(error)
+          }
+      }
+    },
+    watch : {
+      received: function(val){
+        this.received = val
+      }
+    },
+    mounted() {
+      this.getInfo()
     }
-  
+
 }
 </script>
 <style scoped>
+
 *{
   font-weight:300 !important;
 }

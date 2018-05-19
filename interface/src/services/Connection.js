@@ -12,5 +12,8 @@ export default {
     },
     getEventsInfo(){
         return Api().get('show_events')
+    },
+    getCoursesInfo() {
+        return Api().get('show_course')
     }
 }
