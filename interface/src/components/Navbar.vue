@@ -44,15 +44,13 @@
   </div>
 </template>
 <script>
-
-
 export default {
     data(){
         return{
-            showNav: false
+            showNav: false,
+            received: {}
         }
-    }
-
+    },
 }
 </script>
 <style scoped>
@@ -61,9 +59,6 @@ export default {
   height:100px;
 }
 .is-info{
-
-
-
   background: linear-gradient(to right, #00d2ff, #167df0);
 }
 </style>

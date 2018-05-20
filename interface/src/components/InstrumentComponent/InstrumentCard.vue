@@ -22,7 +22,7 @@
             <div class="columns">
                 <div class="column is-3"></div>
                 <div class="column is-6">
-                    <router-link class="button is-fullwidth is-info is-rounded" :to = "{name: 'HireInstrument'}">Hire </router-link>
+                    <button class="button is-fullwidth is-info is-rounded" @click="goToHireInstrument" >Hire</button>
                 </div>
             </div>
         </div>
@@ -30,8 +30,17 @@
 </template>
 
 <script>
+
     export default {
         props: ['instrument'],
+        methods : {
+            goToHireInstrument() {
+                // pass the instrument object Using Vuex to store the data in global
+                this.$store.state.specific.instrument = this.instrument
+                // Then go to hire instrument page
+                this.$router.push('hire_instrument')
+            }
+        },
         watch: {
             event: function(value){
                 this.instrument = value

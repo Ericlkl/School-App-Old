@@ -13,8 +13,7 @@ export default new Vuex.Store({
       username: null,
       email: null,
       bookedSessions: [],
-    }
+    },
+    specific: {}
   }
-
-
 })
