@@ -28,10 +28,10 @@
     </div>
 
     <!-- Card Footer -->
-    <footer class="card-footer">
-    <router-link class="card-footer-item" :to = "{name: 'teacherProfile'}">More... </router-link>
-    <router-link class="card-footer-item" :to = "{name: 'Courses'}">Join Lesson</router-link>
-  </footer>
+      <div class="columns">
+        <div class="column is-6"><button class="button is-info is-focused is-outlined is-fullwidth" @click="goToTeacherProfile" >More... </button></div>
+        <div class="column is-6"><button class="button is-dark is-outlined is-fullwidth" @click="goToTeacherProfile" >Join Course</button></div>
+      </div>
 
   </div>
 </div>
@@ -41,9 +41,19 @@
 export default {
   props: ['tutor'],
   watch : {
-        tutor: function(val) {
+      tutor: function(val) {
             this.tutor = val
-        }
+      }
+  },
+  methods: {
+    goToTeacherProfile() {
+      // pass the tutor object Using Vuex to store the data in global
+      this.$store.state.specific.tutor = this.tutor
+      // Then go to teacherProfile page
+      console.log("Success")
+      console.log(this.$store.state.specific.tutor)
+      this.$router.push('teacherProfile')
+    }
   }
 }
 </script>

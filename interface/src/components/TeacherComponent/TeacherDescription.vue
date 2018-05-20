@@ -6,33 +6,21 @@
                 <!-- Background Information -->
                 <h2 class="title is-2">Background Information</h2>
                 <br>
-                <p>
-                   I am a pianist and composer who has taught people of all ages and levels, including absolute 
-                   beginners, adult students, and taking students through AMEB or VCE exams.
-                </p>
+                <p> {{this.$store.state.specific.tutor.Personal_Description}} </p>
                 <!-- Skill Information -->
                 <h2 class="title is-2">Skill Information</h2>
                 <br>
-                <p>
-                   I am a pianist and composer who has taught people of all ages and levels, including absolute 
-                   beginners, adult students, and taking students through AMEB or VCE exams.
-                </p>
+                <p> {{this.$store.state.specific.tutor.Music_skill}}</p>
 
                 <!-- Teaching Experience Information -->
                 <h2 class="title is-2">Teaching Experience</h2>
                 <br>
-                <p>
-                   I am a pianist and composer who has taught people of all ages and levels, including absolute 
-                   beginners, adult students, and taking students through AMEB or VCE exams.
-                </p>
+                <p> {{this.$store.state.specific.tutor.Teachering_Experience}}</p>
 
                 <!-- Language Information -->
                 <h2 class="title is-2">Language</h2>
                 <br>
-                <p>
-                   I am a pianist and composer who has taught people of all ages and levels, including absolute 
-                   beginners, adult students, and taking students through AMEB or VCE exams.
-                </p>
+                <p> {{this.$store.state.specific.tutor.Language_skill}}</p>
 
             </div>
         </div>
