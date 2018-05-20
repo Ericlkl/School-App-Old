@@ -3,17 +3,17 @@
         <div class="columns">
             <div class="column is-5">
                 <div class="card-image is-fullwidth">
-                        <img src="https://d1aeri3ty3izns.cloudfront.net/media/19/194914/1200/preview.jpg" alt="Placeholder image">
+                        <img v-bind:src="instrument.Image_URL" alt="Placeholder image">
                 </div>
             </div>
 
             <div class="column is-7">
                 <div class="card-content content">
-                    <h6 class="title">Instrument Name: </h6>
-                    <h6 class="title">Condition : </h6>
-                    <h6 class="subtitle">Cost :
+                    <h6 class="title"><b>{{instrument.InstrumentName}}</b></h6>
+                    <h6 class="title">Condition : {{instrument.Condition}} </h6>
+                    <h6 class="subtitle">Cost : {{instrument.Cost}}
                         <br>
-                        InStock: 
+                        InStock: {{instrument.InStock}}
                     </h6>
                 </div> <!-- Card Content end -->
             </div> <!-- Column end -->
@@ -31,7 +31,12 @@
 
 <script>
     export default {
-
+        props: ['instrument'],
+        watch: {
+            event: function(value){
+                this.instrument = value
+            }
+        }
     }
 </script>
 <style scoped>

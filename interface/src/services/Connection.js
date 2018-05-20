@@ -15,5 +15,8 @@ export default {
     },
     getCoursesInfo() {
         return Api().get('show_course')
+    },
+    getInstrumentsInfo() {
+          return Api().get('show_instrument')
     }
 }

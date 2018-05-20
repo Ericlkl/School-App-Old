@@ -2,7 +2,7 @@
   <div>
       <Navbar class="nav"/>
       <div class="container">
-
+          <h1 class="title is-1 has-text-centered">Tutors List</h1>
         <div v-for = "n in num_of_tutors" >
             <div v-if = "n === 1 || (n - 1) % 3 === 0" class="columns">
                 <div v-if="num_of_tutors - n >= 0" class="column is-4"> <TeacherCard :tutor="received.tutorList[n - 1]"/></div>

@@ -2,6 +2,7 @@
   <div>
       <Navbar class="nav"/>
       <div class="main-content">
+        <h1 class="title is-1 has-text-centered">Event List</h1>
         <div class="container">
           
         <div v-for = "n in num_of_Events" >

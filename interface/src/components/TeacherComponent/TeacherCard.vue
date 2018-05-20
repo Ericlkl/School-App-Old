@@ -2,7 +2,7 @@
 <div class="card">
     <!-- Card Header -->
     <header class="card-header">
-        <p id="name" class="card-header-title">{{tutor.FirstName + " " + tutor.LastName}}</p>
+        <h1 id="name" class="card-header-title ">{{tutor.FirstName + " " + tutor.LastName}}</h1>
     </header>
 
     <!-- Teacher Profile Image -->

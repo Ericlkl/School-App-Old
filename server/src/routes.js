@@ -6,6 +6,8 @@ const TeacherController = require('./controllers/TeacherController')
 const EventController = require('./controllers/EventController')
 // Sequelize function for insert Course information to DB or get information from DB
 const CourseController = require('./controllers/CourseController')
+// Sequelize function for insert Instrument information to DB or get information from DB
+const InstrumentController = require('./controllers/InstrumentController')
 
 module.exports = (app) => {
   /*
@@ -34,4 +36,10 @@ module.exports = (app) => {
 
   // route for pass the course information from database to course page
   app.get('/show_course', CourseController.select_all_course)
+
+  // route for insert Instrument information to the database easily
+  app.post('/insert_instrument', InstrumentController.insert_Instrument)
+
+  // route for pass the Instrument information from database to Instrument page
+  app.get('/show_instrument', InstrumentController.select_all_instrument)
 }

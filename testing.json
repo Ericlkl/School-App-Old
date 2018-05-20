@@ -159,3 +159,39 @@
     "Image_URL": "https://www.pmtonline.co.uk/yoma_press/wp-content/uploads/2017/12/10-reasons-you-need-a-taylor-guitar.jpg"
 }
 
+// Instrument Data
+{
+    "InstrumentName": "Artist CL34BK 3/4 Size Classical Guitar Pack, Nylon String - Black",
+    "Description": "This is an ideal guitar for beginners. Its nylon strings are easy on beginner hands and its 3/4 size will suit children between 8 to 13 years old (if you're looking for a smaller version look at our 1/2 and 1/4 range).",
+    "Condition": "Excellent",
+    "InStock": 20,
+    "Cost": 30,
+    "Image_URL": "https://www.artistguitars.com.au/assets/full/10665.jpg"
+}
+
+{
+    "InstrumentName": "Artist PB2L Left Hand Black Electric Bass Guitar with Accessories",
+    "Description": "This Left Hand Bass guitar is designed to be easy to play so it's a great starting point if you want to pick up a bass for the first time. This is a full size bass and is recommended for Adults or Children over the age of 12",
+    "Condition": "New",
+    "InStock": 10,
+    "Cost": 70,
+    "Image_URL": "https://www.artistguitars.com.au/assets/full/13712.jpg"
+}
+
+{
+    "InstrumentName": "Arioso Violin Outfit Including the Simply for Strings Setup 4/4",
+    "Description": "The Arioso Violin Outfit including the Simply for Strings Setup is an excellent fully hand-carved instrument suited to the beginner or continuing player. ",
+    "Condition": "New",
+    "InStock": 15,
+    "Cost": 79,
+    "Image_URL": "https://topnotchviolins.com/wp-content/uploads/2018/02/featured-image-buy-instruments-500x350.jpg"
+}
+
+{
+    "InstrumentName": "Wooden Full Size 4/4 Violin Fiddle Natural Acoustic For Beginners Case",
+    "Description": "Affordable instrument for beginners; 4/4 full size - fits adults and children above 12 years old. (2)Basswood body with elegant varnish finish. (3)Features four fine tuners ",
+    "Condition": "Good",
+    "InStock": 20,
+    "Cost": 30,
+    "Image_URL": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTRzVj1QYYWGOL_BTIFq7uunFIUoR2rX3vW8quf8XMsQWdbUfapXLtIWSMCtOx31D0f79oytNi2&usqp=CAE"
+}
