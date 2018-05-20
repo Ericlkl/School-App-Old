@@ -3,14 +3,7 @@
       <Navbar class="nav"/>
       <div class="main-content">
         <div class="container">
-
-          <div class="columns">
-            <div class="column is-3"> <EventCard/></div>
-            <div class="column is-3"> <EventCard/></div>
-            <div class="column is-3"> <EventCard/></div>
-            <div class="column is-3"> <EventCard/></div>
-          </div>
-
+          
         <div v-for = "n in num_of_Events" >
             <div v-if = "n === 1 || (n - 1) % 4 === 0" class="columns">
                 <div v-if="num_of_Events - n >= 0" class="column is-3"> <EventCard :event="received.eventList[n - 1]"/></div>

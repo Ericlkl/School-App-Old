@@ -92,7 +92,19 @@ export default new Router({
       path: '/becomeTutor',
       name: 'Become',
       component: AsyncRoute('pages/Become_tutor')
+    },
+    {
+      path: '/instrument',
+      name: 'Instrument',
+      component: AsyncRoute('pages/Instrument')
+    },
+    {
+      path: '/hire_instrument',
+      name: 'HireInstrument',
+      component: AsyncRoute('pages/HireInstrument')
     }
+
+
     // {
     //   path: '/dashboard',
     //   name: "Dashboard",

@@ -8,7 +8,6 @@ const EventController = require('./controllers/EventController')
 const CourseController = require('./controllers/CourseController')
 
 module.exports = (app) => {
-
   /*
      To Stas, Those insert_xxx route is made for insert data to DB easily
      You can copy the json from testing.json file in the root folder

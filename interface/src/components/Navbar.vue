@@ -25,12 +25,13 @@
         <div class="navbar-end">
           <router-link class="navbar-item col" :to = "{name: 'Courses'}"> Courses </router-link>
           <router-link class="navbar-item col" :to = "{name: 'events'}"> Events </router-link>
-          <router-link class="navbar-item col" :to = "{name: 'contact'}"> Contact Us </router-link>
-         <router-link class="navbar-item col" :to = "{name: 'About'}"> About us </router-link>
+          <router-link class="navbar-item col" :to = "{name: 'getTutor'}"> Tutors </router-link>
+          <router-link class="navbar-item col" :to = "{name: 'Instrument'}"> Hire Instrument </router-link>
           <router-link class="navbar-item col" :to = "{name: 'Become'}"> Become a tutor </router-link>
-          <router-link class="navbar-item col" :to = "{name: 'getTutor'}"> Get a tutor </router-link>
+          <router-link class="navbar-item col" :to = "{name: 'About'}"> About us </router-link>
+          <router-link class="navbar-item col" :to = "{name: 'contact'}"> Contact Us </router-link>
 
-           <a class="navbar-item col" href="/blog">
+          <a class="navbar-item col" href="/blog">
             Login
           </a>
         </div>
