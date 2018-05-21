@@ -31,9 +31,7 @@ export default {
 .nav{
     margin-top:00px;
 }
-*{
-  font-weight:300 !important;
-}
+
 .main-content{
     max-width: 1024px;
     margin: 0 auto;

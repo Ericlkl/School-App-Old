@@ -54,9 +54,7 @@ export default {
 </script>
 <style scoped>
 
-*{
-  font-weight:300 !important;
-}
+
 h1{
     text-align: center;
 }

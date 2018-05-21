@@ -125,12 +125,10 @@ export default {
 }
 </script>
 <style scoped>
-*{
-  font-weight:300 !important;
-}
+
   .text h1 {
     color: rgba(236, 240, 241, 1.0);
-    font-weight: 100 !important;
+    font-weight: 400 !important;
     font-size: 160%;
   }
     .line {

@@ -106,9 +106,7 @@ export default {
     margin: 0 auto;
     
 }
-*{
-  font-weight:300 !important;
-}
+
 p{
     font-weight:600 !important;
     color:#363636;
