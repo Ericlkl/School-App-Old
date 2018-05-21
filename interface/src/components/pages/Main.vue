@@ -103,6 +103,23 @@
 
 
         </div>
+        <h1 class="subtitle is-1" style="margin-top:20px;">Announcments</h1>
+        <div class='flex-an'>
+            <Announce title="Group music lesson" location="At Pinelands musicschool"
+                      img="https://images.collegexpress.com/blog/college-kids.jpg" 
+                      entry="Free" time="6-30pm" ></Announce>
+            <Announce title="Support session" location="At Pinelands musicschool"
+                      img="https://cdn.hpm.io/wp-content/uploads/2018/05/10230537/HISD-May-10-2018-Meeting-1000x750.jpg" 
+                      entry="Free" time="6-00pm"></Announce>
+            <Announce title="Guest speaker" location="At Pinelands musicschool"
+                      img="http://www.ptcrecruiting.com/wp-content/uploads/2015/07/The-Experion-Group-Luncheon-Guest-Speaker.jpg" 
+                      entry="10$" time="8-00pm"></Announce>
+            <Announce title="New teachers" location="At Pinelands musicschool"
+                      img="https://s-i.huffpost.com/gen/1927275/images/o-TEACHER-COLLABORATION-facebook.jpg" 
+                      entry="Free" time="2-00pm"></Announce>
+
+        </div>
+        
 
       </div>
    
@@ -115,16 +132,23 @@
 <script>
 import Footer from '../Footer'
 import Navbar from '../Navbar'
+import Announce from '../Announc/Announcment'
 
 export default {
     components:{
         Footer,
-        Navbar
+        Navbar, 
+        Announce
     }
   
 }
 </script>
 <style scoped>
+.flex-an{
+  display:flex;
+  justify-content: center;
+  flex-wrap:wrap;
+}
 
   .text h1 {
     color: rgba(236, 240, 241, 1.0);
@@ -154,8 +178,8 @@ export default {
 
   .main_image {
    background: #00d2ff; /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #00d2ff, #167df0); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #00d2ff, #167df0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: -webkit-linear-gradient(to left, #00d2ff, #167df0); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #00d2ff, #167df0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
 
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */

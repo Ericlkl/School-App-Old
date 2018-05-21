@@ -7,7 +7,7 @@
     <nav class="navbar is-info">
       <div class="navbar-brand">
         <a class="navbar-item" href="/">
-         <img src="https://bulma.io/images/bulma-logo-white.png" alt="Bulma: a modern CSS framework based on Flexbox" width="112" height="28">
+         <img src="../assets/logo.png" alt="Bulma: a modern CSS framework based on Flexbox" width="140" height="38">
         </a>
         <!--
     Using the v-on: directive to listen for the click event and toggle the data property showNav. Also, using the v-bind: directive to reactively update the class attribute 'is-active' based on the showNav property.
@@ -31,9 +31,7 @@
           <router-link class="navbar-item col" :to = "{name: 'About'}"> About us </router-link>
           <router-link class="navbar-item col" :to = "{name: 'contact'}"> Contact Us </router-link>
 
-          <a class="navbar-item col" href="/blog">
-            Login
-          </a>
+         
         </div>
       </div>
     </nav>
@@ -50,7 +48,7 @@ export default {
             showNav: false,
             received: {}
         }
-    },
+    }
 }
 </script>
 <style scoped>
@@ -59,6 +57,6 @@ export default {
   height:100px;
 }
 .is-info{
-  background: linear-gradient(to right, #00d2ff, #167df0);
+  background: linear-gradient(to left, #00d2ff, #167df0);
 }
 </style>

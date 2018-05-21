@@ -3,9 +3,12 @@
       <Navbar class="nav"></Navbar>
       <div class="main-content">
           <div class="flex-img-txt">
-                  <img src="http://cdn.playbuzz.com/cdn/7aa950b4-eaa0-417d-93af-3bd332dc8086/dec8c31c-3c84-4ae3-b8e1-ba6f1da345d1_560_420.jpg">
+                  <img src="http://www.collegedegreesearch.net/wp-content/uploads/2015/03/southflorida.jpg">
                 <div class="text"><h1 class="title is-4"> Music school</h1>
-                   <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                   
+                   <p> 
+                   Pinelands Music School has been providing music lessons to children of all ages within the metropolitan Brisbane area. First established in 2014, the school has been slowly expanding and broadening, allowing prospective and current musicians alike to further learn and enhance their musical ability. From the guitar to the flute, drums to the double bass, trombones and even vocals, Pinelands Music School has lessons for everyone, regardless of skill level!
+                   </p>
               </div>
           </div>
           <div class="flex-img">
