@@ -9,6 +9,11 @@
           <h1>Terms and Conditions ("Terms")</h1>
             <p>Last updated: May 17, 2018</p>
 
+            <p>Pinelands Music School will do its best to provide a safe and comfortable environment for our students to learn in, 
+            as well as provide the best possible experience and training available.It is expected that students will 
+            attend lessons punctually and prepared to learn, including (but not limited to): respectable appearance,
+            a positive attitude, and any required materials (music books, private instruments, etc).</p>
+
             <!-- Terms Section -->
             <p>Please read these Terms and Conditions ("Terms", "Terms and Conditions") carefully 
             before using the www.pinelandMusicSchool.com website (the "Service") operated by Pineland Music School 
