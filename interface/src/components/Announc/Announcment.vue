@@ -7,7 +7,7 @@
             <h4>{{location}}</h4>
             <h4>Time : {{time}}</h4>
 
-            <p>Entry {{entry}} </p>   
+            <p>Price: {{entry}} </p>   
         </div>
     </router-link>
   </div>

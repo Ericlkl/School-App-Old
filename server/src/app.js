@@ -1,3 +1,4 @@
+
 const express = require('express')
 const app = express()
 // config data for create Database for Squelize
@@ -17,7 +18,7 @@ app.use(cors())
 
 // post get method
 require('./routes')(app)
-
+ // eslint-disable-line
 sequelize
   .sync()
   .then(() => {

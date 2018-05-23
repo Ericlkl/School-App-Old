@@ -17,7 +17,7 @@
     <div class="each img-sup" id="benefits">
       <div class="after_image  row">
 
-        <div class="section">
+        <div class="move-down">
           <h2 class="subtitle is-1">Get music lessons &mdash; the support that is needed</h2>
           <p class="subtitle is-4">
            Learn how to play varius instruments across the world
@@ -28,7 +28,7 @@
 
           <div class="column-flex">
             <div class="img">
-              <img src="https://thumbs.dreamstime.com/b/cartoon-penguin-eating-fish-flat-vector-isolated-white-background-illustration-81262287.jpg">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmrEPWD2kwjtI6Ydig4cGM4CvbDSFiUIvtdZLB_Q_CZzoOysI2">
             </div>
             <div class="text-img">
               <h3 class="subtitle is-4 fix-weight">Join community</h3>
@@ -63,14 +63,14 @@
 
             </div>
             <div class="img">
-              <img src="https://thumbs.dreamstime.com/b/penguin-vector-silhouette-8109184.jpg">
+              <img src="https://png.icons8.com/ios/1600/sent.png">
             </div>
 
           </div>
 
           <div class="column-flex">
             <div class="img">
-              <img src="https://thumbs.dreamstime.com/b/baby-penguin-vector-cute-illustration-flat-white-background-77507515.jpg">
+              <img src="https://static1.squarespace.com/static/56264887e4b059071d268f91/t/5632516be4b0ba9c7492687b/1446138221434/music-teacher.png">
             </div>
             <div class="text-img">
               <h3 class="subtitle is-4 fix-weight">Personal assistance</h3>
@@ -84,25 +84,11 @@
           </div>
 
 
-          <div class="column-flex mar">
-
-            <div class="text-img">
-              <h3 class="subtitle is-4 fix-weight">Get in class</h3>
-              <p class="subtitle is-5">
-                Create an article and Create an article Create an article and Create an article and Create an article and Create an article and Create an article and.
-              </p>
-
-            </div>
-            <div class="img">
-              <img src="https://cdn.tutsplus.com/vector/uploads/legacy/freebies/vector_illustrations/023_penguin/penguin-600.jpg">
-            </div>
-
-          </div>
-
 
 
 
         </div>
+        <div class="section">
         <h1 class="subtitle is-1" style="margin-top:20px;">Announcments</h1>
         <div class='flex-an'>
             <Announce title="Group music lesson" location="At Pinelands musicschool"
@@ -119,7 +105,7 @@
                       entry="Free" time="2-00pm"></Announce>
 
         </div>
-        
+        </div>
 
       </div>
    
@@ -154,6 +140,9 @@ export default {
     color: rgba(236, 240, 241, 1.0);
     font-weight: 400 !important;
     font-size: 160%;
+  }
+  .move-down{
+    margin-bottom:55px;
   }
     .line {
     width: 30%;
@@ -226,6 +215,8 @@ export default {
 
   .section {
     margin-bottom: 35px;
+    margin-top:50px;
+    background-color:#ecf0f1;
     
   }
 

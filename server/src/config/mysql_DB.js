@@ -17,5 +17,8 @@ function createDB () {
     })
   })
 }
+setTimeout (function() { 
+  require('./populateSQL') 
+}, 3000);
 
 module.exports = createDB()
