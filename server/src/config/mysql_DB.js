@@ -18,6 +18,7 @@ function createDB () {
     })
   })
 }
+
 setTimeout (function() { 
   require('./populateSQL') 
 }, 4000);
