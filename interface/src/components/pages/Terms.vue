@@ -87,20 +87,19 @@
 </template>
 
 <script>
-import Footer from '../Footer'
-import Navbar from '../Navbar'
+import Footer from "../Footer";
+import Navbar from "../Navbar";
 
 export default {
-    components:{
-        Footer,
-        Navbar
-    }
-  
-}
+  components: {
+    Footer,
+    Navbar
+  }
+};
 </script>
 
 <style scoped>
-.page{
-    background-color: rgb(244, 249,253);
+.page {
+  background-color: rgb(244, 249, 253);
 }
 </style>

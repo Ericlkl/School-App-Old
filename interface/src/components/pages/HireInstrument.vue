@@ -10,10 +10,13 @@
                                 <img class="image is-Square" v-bind:src="this.$store.state.specific.instrument.Image_URL">
                             </div>
                             <div class="has-text-centered column is-8">
-                                <h1 class="title is-2">{{this.$store.state.specific.instrument.InstrumentName}} </h1>
-                                <h1 class="title is-2">Condition : {{this.$store.state.specific.instrument.Condition}} </h1>
-                                <h1 class="title is-2">Cost : {{this.$store.state.specific.instrument.Cost}}  </h1>
-                                <h1 class="title is-2">In Stock : {{this.$store.state.specific.instrument.InStock}}  </h1>
+                                <br>
+                                <br>
+                                <br>
+                                <h1 class="title is-4">{{this.$store.state.specific.instrument.InstrumentName}} </h1>
+                                <h1 class="title is-4">Condition : {{this.$store.state.specific.instrument.Status}} </h1>
+                                <h1 class="title is-4">Cost : ${{this.$store.state.specific.instrument.Cost}} p/m </h1>
+                                <h1 class="title is-4">In Stock : {{this.$store.state.specific.instrument.InStock}}  </h1>
                             </div>
                         </div>
                     </div>

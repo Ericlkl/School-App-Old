@@ -4,7 +4,7 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING,
       allowNull: false
     },
-    Condition: {
+    Status: {
       type: DataTypes.ENUM,
       values: ['New', 'Excellent', 'Good', 'Repair', 'Discard'],
       allowNull: false

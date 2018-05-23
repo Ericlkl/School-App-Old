@@ -2,7 +2,7 @@
     <div class="columns">
         <div class="column is-1"></div>
         <div class="column is-10">
-            <h1 class="has-text-centered title is-1">Hire Instrument</h1>
+            <h2 class="has-text-centered title is-2">Hire Instrument</h2>
                 <!--  Student ID and Student Name field -->
                 <div class="field is-horizontal"> 
                     <div class="field-label is-normal">
@@ -54,7 +54,7 @@
                 <!-- End of Date field -->
             
             <div class="has-text-centered">
-                <button class="button is-success">Send Request</button>
+                <button class="button is-info">Send Request</button>
             </div>
 
         </div>
@@ -67,5 +67,4 @@
     }
 </script>
 <style scoped>
-
 </style>

@@ -1,8 +1,18 @@
 <template>
     <div>
       <Navbar class="nav"/>
+        <section id="banner" class="hero is-medium">
+            <div class="hero-body">
+            <div class="container">
+                <h1 class="title is-1 has-text-centered" id="banner-title">Instrument</h1>
+                <h4 class="subtitle is-4 has-text-centered" id="banner-title">Hire Instrument to practice your skill</h4>
+            </div>
+            </div>
+        </section>
+
+      <br>
+      <br>
         <div class="main-content">
-            <h1 class="title is-1 has-text-centered">Instrument List</h1>
             <div class="container">
             <div v-for = "n in num_of_instruments" >
                 <div v-if = "n === 1 || (n - 1) % 3 === 0" class="columns">
@@ -62,5 +72,15 @@ export default {
 }
 </script>
 <style scoped>
+#banner{
+  background-image:url(https://images2.alphacoders.com/749/thumb-1920-749444.png);
+  background-size: cover;
+  background-position: center center;
+}
+
+#banner-title{
+  color:white;
+  background-color: rgba(5, 0, 0, 0.10);
+}
 
 </style>

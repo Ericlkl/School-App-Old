@@ -1,6 +1,7 @@
 <template>
   <div>
       <Navbar class="nav" />
+
       <div class="container">
           <div class="columns">
               <div class="column is-4">

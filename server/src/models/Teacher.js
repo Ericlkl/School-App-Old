@@ -17,7 +17,7 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false
     },
     PhoneNumber: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.STRING,
       allowNull: false
     },
     Email: {
@@ -29,7 +29,7 @@ module.exports = (sequelize, DataTypes) => {
     Facebook_ID: DataTypes.STRING,
 
     Qualification: {
-      type: DataTypes.ENUM('Diploma', 'Bachelor', 'Master'),
+      type: DataTypes.STRING,
       allowNull: false
     },
 

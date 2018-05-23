@@ -9,11 +9,11 @@
 
             <div class="column is-7">
                 <div class="card-content content">
-                    <h6 class="title"><b>{{instrument.InstrumentName}}</b></h6>
-                    <h6 class="title">Condition : {{instrument.Condition}} </h6>
-                    <h6 class="subtitle">Cost : {{instrument.Cost}}
+                    <h6 class="title is-6"><b>{{instrument.InstrumentName}}</b></h6>
+                    <h6 class="title is-6">Condition : {{instrument.Status}}</h6>
+                    <h6 class="subtitle is-6">Cost : ${{instrument.Cost}} p/m
                         <br>
-                        InStock: {{instrument.InStock}}
+                        InStock: {{instrument.InStock}} left..
                     </h6>
                 </div> <!-- Card Content end -->
             </div> <!-- Column end -->
