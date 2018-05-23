@@ -4,7 +4,8 @@ const config = require('./config')
 var con = mysql.createConnection({
   host: config.db.options.host,
   user: config.db.user,
-  password: config.db.password
+  password: config.db.password,
+
 })
 
 function createDB () {
@@ -19,6 +20,6 @@ function createDB () {
 }
 setTimeout (function() { 
   require('./populateSQL') 
-}, 3000);
+}, 4000);
 
 module.exports = createDB()

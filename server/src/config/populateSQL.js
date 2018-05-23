@@ -9,6 +9,10 @@ var con = mysql.createConnection({
 })
 let super_script = `
 
+-- Pineland Music School Data
+-- Created by LEE KA LONG (ERIC)
+
+
 -- Teachers Data
  INSERT INTO Teachers
   (FirstName,LastName,Gender,Address,PhoneNumber,Email ,Facebook_ID ,Qualification,
@@ -22,11 +26,30 @@ let super_script = `
 
 
  `
+
+ let test = `INSERT INTO Teachers
+  (FirstName,LastName,Gender,Address,PhoneNumber,Email ,Facebook_ID ,Qualification,
+  Good_at,Personal_Description,Teachering_Experience,Music_skill,Language_skill,Image_URL) 
+  VALUES("Jesse", "Taylor", "Male","54 Oakwood Street","0738837180","taylor_j_12@gmail.com"
+  	,"JTRocks","Master","Vocals and Guitar"
+  	,"I am currently a member of ‘Master Safe’, a local rock cover band that plays in venues across the greater Brisbane area, as well as the Sunshine and Gold Coasts.
+    I’ve been playing with Master Safe as their lead vocalist for five years now."
+  	,' Two years with Pinelands Music School','Expert','English, Japanese, French'
+      ,'https://i.imgur.com/7kgK3XL.jpg');`
+      
+
+
+// https://stackoverflow.com/questions/8899802/how-do-i-do-a-bulk-insert-in-mysql-using-node-js?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa
+
 function populateDb () {
   con.connect(function (err) {
     if (err) throw err
     console.log('Before insesrt')
     con.query(super_script, function (err, result) {
+    if (err) throw err
+    console.log('Insertion complete')
+    })
+    con.query(test, function (err, result) {
     if (err) throw err
     console.log('Insertion complete')
     })
