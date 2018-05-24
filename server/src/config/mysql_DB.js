@@ -1,3 +1,4 @@
+/* eslint-disable */
 const mysql = require('mysql')
 const config = require('./config')
 
@@ -18,9 +19,9 @@ function createDB () {
     })
   })
 }
-
-// setTimeout (function() { 
-//   require('./populateSQL') 
-// }, 4000);
+ // eslint-disable-line
+setTimeout(function () { 
+  require('./populateSQL') 
+}, 4000)
 
 module.exports = createDB()

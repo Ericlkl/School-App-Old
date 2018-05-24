@@ -70,7 +70,7 @@ import Oops from './Oops'
   .foot {
     margin-top: 5rem;
     background-color: #272727;
-    padding: 2rem;
+    padding: 1rem;
   }
 
   .flex-row {

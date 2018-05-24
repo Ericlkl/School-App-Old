@@ -2,7 +2,7 @@
     <div>
       <Navbar class="nav"/>
             <!-- Instrument Information Banner -->
-            <section class="hero card is-small">
+            <section class="hero fix is-small">
                 <div class="hero-body">
                     <div class="container">
                         <div class="columns">
@@ -13,10 +13,10 @@
                                 <br>
                                 <br>
                                 <br>
-                                <h1 class="title is-4">{{this.$store.state.specific.instrument.InstrumentName}} </h1>
-                                <h1 class="title is-4">Condition : {{this.$store.state.specific.instrument.Status}} </h1>
-                                <h1 class="title is-4">Cost : ${{this.$store.state.specific.instrument.Cost}} p/m </h1>
-                                <h1 class="title is-4">In Stock : {{this.$store.state.specific.instrument.InStock}}  </h1>
+                                <h1 class="subtitle is-4">{{this.$store.state.specific.instrument.InstrumentName}} </h1>
+                                <h1 class="subtitle is-4">Condition : {{this.$store.state.specific.instrument.Status}} </h1>
+                                <h1 class="subtitle is-4">Cost : ${{this.$store.state.specific.instrument.Cost}} p/m </h1>
+                                <h1 class="subtitle is-4">In Stock : {{this.$store.state.specific.instrument.InStock}}  </h1>
                             </div>
                         </div>
                     </div>
@@ -44,6 +44,13 @@ export default {
 <style scoped>
 .card{
     background-color: aliceblue;
+    border:1px solid white !important;
 }
-
+.hero-body{
+   
+}
+.fix{
+    background-color:#ecf0f1;
+    margin-top:-50px;
+}
 </style>
