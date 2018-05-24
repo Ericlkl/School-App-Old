@@ -14,7 +14,7 @@
       <br>
       <br>
       <div class="container">
-        <div v-for = "n in num_of_tutors" :key="n.id" >
+        <div v-for = "n in num_of_tutors" >
             <div v-if = "n === 1 || (n - 1) % 3 === 0" class="columns">
                 <div v-if="num_of_tutors - n >= 0" class="column is-4"> <TeacherCard :tutor="received.tutorList[n - 1]"/></div>
                 <div v-if="num_of_tutors - n - 1 >= 0 " class="column is-4"> <TeacherCard :tutor="received.tutorList[n]"/></div>

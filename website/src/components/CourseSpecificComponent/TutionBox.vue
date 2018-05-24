@@ -6,7 +6,7 @@
                 <h4 class="has-text-centered title is-4">Tution Fee</h4>
                 <br>
                 <p>
-                   $ xxxxx per year
+                   $ 2000 per year
                 </p>
             </div>
         </div>

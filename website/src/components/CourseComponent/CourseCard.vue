@@ -3,7 +3,7 @@
         <router-link :to = "{name: 'specific'}">
         <img v-bind:src="event.Image_URL">
         <div class="text">
-            <h4>{{event.CourseName}}</h4>
+            <h4 class='subtitle is-5'>{{event.CourseName}}</h4>
             <h4>Price : {{event.TutionFee}}</h4>
             <h4>Period : {{event.Period}}</h4>
             <h4>Time : {{event.Day}} {{event.Time}}</h4>
@@ -27,13 +27,13 @@ export default {
 </script>
 <style scoped>
 *{
-  font-weight:300 !important;
+    color:#4a4a4a;
 }
-
 .card{
     flex-basis: 200px;
     cursor: pointer;
-
+    min-width:300px;
+    min-height:400px;
     margin:20px;
     margin-top:40px;
     transition: 0.5s ease-in-out;

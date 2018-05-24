@@ -2,7 +2,7 @@
     <div class="columns">
         <div class="column is-1"></div>
         <div class="column is-10">
-            <h2 class="has-text-centered title is-2">Hire Instrument</h2>
+            <h2 class="has-text-centered subtitle is-2 fix">Hire Instrument</h2>
                 <!--  Student ID and Student Name field -->
                 <div class="field is-horizontal"> 
                     <div class="field-label is-normal">
@@ -54,7 +54,7 @@
                 <!-- End of Date field -->
             
             <div class="has-text-centered">
-                <button class="button is-info">Send Request</button>
+                <button class="button is-info" @click="success">Send Request</button>
             </div>
 
         </div>
@@ -63,8 +63,19 @@
 
 <script>
     export default {
+            methods: {
+            success() {
+                this.$toast.open({
+                    message: 'The form has been submited',
+                    type: 'is-success'
+                })
+            }
+        }
 
     }
 </script>
 <style scoped>
+.fix{
+    margin-top:40px;
+}
 </style>

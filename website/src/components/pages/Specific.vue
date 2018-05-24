@@ -15,17 +15,17 @@
                     <Requirementbox/>
                     <br>
                     <!-- View Terms and Enquire button -->
-                    <div class="has-text-centered">
+                    <div class="has-text-centered fix">
                         <router-link :to = "{name: 'terms'}">
-                        <button class="button is-light">View Terms&Con</button>
+                        <button class="button is-light is-filled">View Terms&Con</button>
                         </router-link>
                         <br>
                         <router-link :to = "{name: 'contact'}">
-                        <button class="button is-info is-outlined">Make an Enquire</button>
+                        <button class="button is-info is-filled">Make an Enquire</button>
                         </router-link>
                         <br>
                         <!-- You can click the button to test showing the form -->
-                        <button @click="register()" class="button is-success is-outlined">Join Course</button>
+                        <button @click="register()" class="button is-success is-filled">Join Course</button>
                     </div>
                 </div>
             </div>
@@ -73,5 +73,8 @@ export default {
 }
 </script>
 <style scoped>
-
+.fix{
+    display:flex;
+    flex-direction:column;
+}
 </style>

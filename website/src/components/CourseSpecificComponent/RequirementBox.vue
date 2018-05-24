@@ -6,7 +6,7 @@
                 <h4 class="has-text-centered title is-4">Enrol Requirement</h4>
                 <br>
                 <p>
-                    Type something here
+                    The instrument will be provided, just come to class
                 </p>
             </div>
         </div>

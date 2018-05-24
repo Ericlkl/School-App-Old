@@ -6,7 +6,7 @@
                 <h4 class="has-text-centered title is-4"> <u>Course Description </u></h4>
                 <br>
                 <p>
-                    dfgoihfg9f8dg98ydf98gyfd89yg89fdy9g
+                    The course will intoduce you to the basics of violin, you will learn from the best teachers in the industry that perform on world stages around the globe
                 </p>
             </div>
         </div>

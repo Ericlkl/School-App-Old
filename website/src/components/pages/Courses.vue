@@ -2,10 +2,17 @@
   <div>
       <Navbar/>
       
+      <section id="banner" class="hero is-medium is-light is-bold">
+        <div class="hero-body">
+          <div class="container">
+             <h1 class="title is-1 has-text-centered" id="banner-title">Courses</h1>
+             <h4 class="subtitle is-4 has-text-centered" id="banner-title">Join the best music lessons</h4>
+          </div>
+        </div>
+      </section>
       <div class="main-content">
-         <h1 class="subtitle is-1">Choose the courses you like</h1>
           <div class="flex-cards">
-                 <CourseCard v-for = "x in num_of_Event" :key="x.id" :event="received.courseList[x-1]" />
+                 <CourseCard v-for = "x in num_of_Event" :event="received.courseList[x-1]" />
           </div>     
       </div>
       <Footer/>
@@ -53,7 +60,15 @@ export default {
 }
 </script>
 <style scoped>
+#banner{
+  background-image:url(https://cdn.pixabay.com/photo/2015/09/22/15/24/music-951844__340.jpg);
+  background-size: cover;
+  background-position: center center;
+}
 
+#banner-title{
+  color:whitesmoke;
+}
 
 h1{
     text-align: center;

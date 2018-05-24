@@ -6,7 +6,7 @@
         <div class="hero-body">
           <div class="container">
              <h1 class="title is-1 has-text-centered" id="banner-title">Event</h1>
-             <h4 class="subtitle is-4 has-text-centered" id="banner-title">Join our bigest event in Australia</h4>
+             <h4 class="subtitle is-4 has-text-centered" id="banner-title">Join our bigest events in Australia</h4>
           </div>
         </div>
       </section>
@@ -15,7 +15,7 @@
       <br>
       <div class="main-content">
         <div class="container">
-        <div v-for = "n in num_of_Events" :key="n.id" >
+        <div v-for = "n in num_of_Events" >
             <div v-if = "n === 1 || (n - 1) % 4 === 0" class="columns">
                 <div v-if="num_of_Events - n >= 0" class="column is-3"> <EventCard :event="received.eventList[n - 1]"/></div>
                 <div v-if="num_of_Events - n - 1 >= 0 " class="column is-3"> <EventCard :event="received.eventList[n]"/></div>

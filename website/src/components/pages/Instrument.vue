@@ -14,7 +14,7 @@
       <br>
         <div class="main-content">
             <div class="container">
-            <div v-for = "n in num_of_instruments" :key="n.id" >
+            <div v-for = "n in num_of_instruments" >
                 <div v-if = "n === 1 || (n - 1) % 3 === 0" class="columns">
                     <div v-if="num_of_instruments - n >= 0" class="column is-4"><InstrumentCard :instrument="received.instrumentList[n-1]"/> </div>
                     <div v-if="num_of_instruments - n - 1 >= 0 " class="column is-4"><InstrumentCard :instrument="received.instrumentList[n]"/></div>

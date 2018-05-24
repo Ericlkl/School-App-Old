@@ -45,7 +45,7 @@
         </div>
         </div>
 
-        <button @click="uploadQuestion" class='button is-warning is-rounded'>Send</button>
+        <button @click="uploadQuestion" class='button is-info is-rounded fix'>Send</button>
         </div>
         </section>
 </template>
@@ -73,6 +73,11 @@ import Connection from '../services/Connection'
                         PhoneNumber: this.phonenumber,
                         Message: this.message
                     })
+                     this.$toast.open({
+                        message: 'The contact form has been sent',
+                        type: 'is-success'
+                    })
+                    
                 } catch (error){
                     this.error = error.response.data.error
                 }
@@ -80,3 +85,9 @@ import Connection from '../services/Connection'
         }
     }
 </script>
+<style scoped>
+.fix{
+    width:200px !important;
+    height:40px;
+}
+</style>
