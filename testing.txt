@@ -1,2 +1,0 @@
-Password validation not done
-Email Field should be unique

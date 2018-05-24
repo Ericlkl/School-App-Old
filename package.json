@@ -1,0 +1,21 @@
+{
+  "name": "IFB299-Project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./server/src/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ericlkl/IFB299-Project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ericlkl/IFB299-Project/issues"
+  },
+  "homepage": "https://github.com/Ericlkl/IFB299-Project#readme"
+}
