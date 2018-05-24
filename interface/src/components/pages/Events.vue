@@ -6,7 +6,7 @@
         <div class="hero-body">
           <div class="container">
              <h1 class="title is-1 has-text-centered" id="banner-title">Event</h1>
-             <h4 class="subtitle is-4 has-text-centered" id="banner-title">Join our bigest event in Australia</h4>
+             <h4 class="subtitle is-4 has-text-centered" id="banner-title">Join our bigest events in Australia</h4>
           </div>
         </div>
       </section>

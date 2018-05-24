@@ -54,7 +54,7 @@
                 <!-- End of Date field -->
             
             <div class="has-text-centered">
-                <button class="button is-info">Send Request</button>
+                <button class="button is-info" @click="success">Send Request</button>
             </div>
 
         </div>
@@ -63,6 +63,14 @@
 
 <script>
     export default {
+            methods: {
+            success() {
+                this.$toast.open({
+                    message: 'The form has been submited',
+                    type: 'is-success'
+                })
+            }
+        }
 
     }
 </script>

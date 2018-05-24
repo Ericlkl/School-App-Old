@@ -61,7 +61,7 @@
         </b-field>
         </div>
 
-        <a class="button is-info">Submit</a>
+        <a class="button is-info" @click='success'>Submit</a>
         </div>
         </div>
     
@@ -83,7 +83,15 @@ export default {
             return {
                 date: new Date()
             }
-        }
+        },
+    methods:{
+        success() {
+                this.$toast.open({
+                    message: 'The form has been submited',
+                    type: 'is-success'
+                })
+            }
+    }
   
 }
 </script>
