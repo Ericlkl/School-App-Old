@@ -1,3 +1,4 @@
+/* eslint-disable */
 
 const express = require('express')
 const app = express()
@@ -19,9 +20,14 @@ app.use(cors())
 // post get method
 require('./routes')(app)
  // eslint-disable-line
-sequelize
-  .sync()
+setTimeout(function () { 
+  sequelize
+  .sync().catch(function (err) {
+      console.log(err);
+  })
   .then(() => {
     app.listen(config.port)
     console.log(`Server started on port ${config.port}`)
   })
+}, 1000)
+

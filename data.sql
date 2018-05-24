@@ -1,7 +1,5 @@
 -- Pineland Music School Data
 -- Created by LEE KA LONG (ERIC)
-USE Pineland_Music_School;
-
 -- Teachers Data
  INSERT INTO Teachers
   (FirstName,LastName,Gender,Address,PhoneNumber,Email ,Facebook_ID ,Qualification,
