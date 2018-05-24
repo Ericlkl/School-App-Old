@@ -7,6 +7,7 @@ var address = ""
 publicIp.v4().then(ip => {
   address = ip
   //=> '46.5.21.123'
+  console.log(`http://${address}:8081/`)
 });
 
 
