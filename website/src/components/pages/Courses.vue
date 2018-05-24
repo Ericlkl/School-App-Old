@@ -12,7 +12,7 @@
       </section>
       <div class="main-content">
           <div class="flex-cards">
-                 <CourseCard v-for = "x in num_of_Event" :event="received.courseList[x-1]" />
+                 <CourseCard v-for = "x in num_of_Event" :key="x.id" :event="received.courseList[x-1]" />
           </div>     
       </div>
       <Footer/>

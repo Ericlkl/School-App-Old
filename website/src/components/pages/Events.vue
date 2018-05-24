@@ -15,7 +15,7 @@
       <br>
       <div class="main-content">
         <div class="container">
-        <div v-for = "n in num_of_Events" >
+        <div v-for = "n in num_of_Events" :key="n.id" >
             <div v-if = "n === 1 || (n - 1) % 4 === 0" class="columns">
                 <div v-if="num_of_Events - n >= 0" class="column is-3"> <EventCard :event="received.eventList[n - 1]"/></div>
                 <div v-if="num_of_Events - n - 1 >= 0 " class="column is-3"> <EventCard :event="received.eventList[n]"/></div>
