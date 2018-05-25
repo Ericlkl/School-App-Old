@@ -6,36 +6,27 @@
         <!-- Full name input field -->
         <div class="field">
         <label class="label">Full Name*</label>
-        <div class="control has-icons-left has-icons-right">
+        <div class="control">
             <input class="input" type="text" placeholder="E.g Burce Wayne" v-model="fullname">
-            <span class="icon is-small is-left">
-            <i class="fas fa-user"></i>
-            </span>
-            <span class="icon is-small is-right">
-            <i class="fas fa-check"></i>
-            </span>
         </div>
         </div>
 
         <!-- Email input field -->
         <div class="field">
         <label class="label">Email*</label>
-        <div class="control has-icons-left has-icons-right">
+        <div class="control">
             <input class="input" type="text" placeholder="Abc@email.com" v-model="email">
-            <span class="icon is-small is-left">
-            <i class="fas fa-user"></i>
-            </span>
-            <span class="icon is-small is-right">
-            <i class="fas fa-check"></i>
-            </span>
         </div>
         </div>
 
         <!-- Phone number text field -->
         <div class="field">
         <label class="label">Phone Number*</label>
-        <div class="control has-icons-left has-icons-right">
+        <div class="control has-icons-left">
             <input class="input" type="text" v-model="phonenumber">
+            <span class="icon is-small is-left">
+            <label class="label">+61</label>
+            </span>
         </div>
         </div>
 
@@ -45,7 +36,7 @@
         </div>
         </div>
 
-        <button @click="uploadQuestion" class='button is-info is-rounded fix'>Send</button>
+        <button @click="submitQuestion" class='button is-info is-rounded fix'>Send</button>
         </div>
         </section>
 </template>
@@ -58,29 +49,61 @@ import Connection from '../services/Connection'
         data() {
             return {
                 fullname: '',
-                phonenumber: 61,
+                phonenumber: '',
                 email: '',
                 message: '',
-                error: null
+                error: null,
             }
         },
         methods : {
+            showAlertMsg: function(msg){
+                this.$toast.open({
+                    message: msg,
+                    type: 'is-danger'
+                })
+            },
+            submitQuestion: function(){
+                // Test Case - Testing User Insert Validation
+                if (this.fullname.length === 0){
+                    this.showAlertMsg("Please insert Your Name!")
+                    return 
+                }
+                if (this.email.length === 0){
+                    this.showAlertMsg("Please insert Your Email Address!")
+                    return 
+                }
+                if (this.phonenumber.length === 0){
+                    this.showAlertMsg("Please Insert Your Phone Number !")
+                    return 
+                } else if (this.phonenumber.length != 9){
+                    this.showAlertMsg("There must be 9 digit for the phone number!")
+                    return 
+                }
+                if (this.message.length === 0){
+                    this.showAlertMsg("Please insert Message field!")
+                    return 
+                }
+                // If it is correct, pass it into Database!
+                this.uploadQuestion()
+            },
             async uploadQuestion() {
                 try {
                     const response = await Connection.submitQuestion({
                         FullName : this.fullname,
                         Email: this.email,
-                        PhoneNumber: this.phonenumber,
+                        PhoneNumber: parseInt(this.phonenumber),
                         Message: this.message
                     })
-                     this.$toast.open({
+                    // show information box when it is success!
+                    this.$toast.open({
                         message: 'The contact form has been sent',
                         type: 'is-success'
-                    })
-                    
+                    })           
                 } catch (error){
                     this.error = error.response.data.error
-                }
+                    // show Alert box when it is Failed insert data to database!
+                    this.showAlertMsg(this.error)
+                }  
             }
         }
     }

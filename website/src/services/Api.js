@@ -5,7 +5,8 @@ const axios = require('axios')
 export default () => {
   // create axios object point to our backend URL 8081
   return axios.create({
-    // need to change to localhost when we need to develop on our laptop
-    baseURL: `http://172.31.46.249:8081/` // Connect to our backend API,
+    // when we developing the website, it should be localhost 
+    // when we deploy the website to the server, change it to public IP
+    baseURL: `http://localhost:8081/` // Connect to our backend API,
   })
 }

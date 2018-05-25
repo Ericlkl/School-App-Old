@@ -9,7 +9,7 @@ module.exports = {
       console.log(err)
       // any insert error occur will show in here
       res.status(400).send({
-        error: 'Something wrong with leave question'
+        error: 'something went wrong with the data'
       })
     }
   }
