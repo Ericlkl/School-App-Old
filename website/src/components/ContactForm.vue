@@ -32,17 +32,16 @@
 
         <div class="field">
         <div class="control">
-            <textarea class="textarea is-success" type="text" v-model="message" placeholder="Success textarea"></textarea>
+            <textarea class="textarea is-success" type="text" v-model="message" placeholder="Enter your message here"></textarea>
         </div>
         </div>
 
-        <button @click="submitQuestion" class='button is-info is-rounded fix'>Send</button>
+        <button @click="uploadQuestion" class='button is-info is-rounded fix'>Send</button>
         </div>
         </section>
 </template>
 
 <script>
-
 import Connection from '../services/Connection'
 
     export default {
@@ -52,6 +51,7 @@ import Connection from '../services/Connection'
                 phonenumber: '',
                 email: '',
                 message: '',
+                isValid: false
             }
         },
         methods : {
@@ -60,6 +60,7 @@ import Connection from '../services/Connection'
                 this.phonenumber =  ''
                 this.email =  ''
                 this.message =  ''
+                this.isValid = false
             },
             showAlertMsg(msg){
                 this.$toast.open({
@@ -67,23 +68,45 @@ import Connection from '../services/Connection'
                     type: 'is-danger'
                 })
             },
-            submitQuestion(){
+            checkValid(){
+                // Regular Express for Email format
+                const emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
+                /*
+                    Initialise the alertMsg variable, it is used to pass the text string to alret the user
+                    their information in incorrect
+                */
+
+                //  Testing for Message Box
                 var alertMsg = (this.message.length === 0) ? "Please insert Your Message!" : null
+
+                // Testing for phone number input field, only accept number and must be 9 digit long
+                alertMsg = (!/^[0-9]*$/.test(this.phonenumber)) ? "Invalid phone number detected! Please correct it!" : alertMsg
                 alertMsg = (this.phonenumber.length != 9) ? "There must be 9 digit for the phone number!" : alertMsg
                 alertMsg = (this.phonenumber.length === 0) ? "Please Insert Your Phone Number !" : alertMsg
+
+                // Testing for email input field, using Regular expression to check the email format
+                alertMsg = (!emailRegex.test(this.email)) ? "Invalid emaill format detected! Please Correct it!" : alertMsg
                 alertMsg = (this.email.length === 0) ? "Please insert Your Email Address!" : alertMsg
+
+                // Testing for name input field, only accept english letter a-z, A-Z and space _ 
+                alertMsg = (!/^[a-zA-Z_ ]*$/.test(this.fullname)) ? "Invaild name detected! Only accept english letter!" : alertMsg
                 alertMsg = (this.fullname.length === 0) ? "Please insert Your Name!" : alertMsg
 
                 if (alertMsg != null){
                     this.showAlertMsg(alertMsg)
-                    return
+                    return false
                 }
+                // return true for isValid attribute
+                return true
 
-                // If it is correct, pass it into Database!
-                this.uploadQuestion()
             },
+
             async uploadQuestion() {
+                this.isValid = this.checkValid()
+                // If the information is not in valid format , stop the function 
+                if (!this.isValid){ return }
+
                 try {
                     // Pass information to port 8081, then update database
                     const response = await Connection.submitQuestion({
@@ -102,6 +125,7 @@ import Connection from '../services/Connection'
                 } catch (error){
                     // show Alert box when it is Failed insert data to database!
                     this.showAlertMsg(error.response.data.error)
+                    this.isValid = false
                 }  
             }
         }

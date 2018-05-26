@@ -4,28 +4,28 @@
         <h1 class="title is-3 has-text-centered">Your Register information</h1>
         <!-- Given Name -->
         <div class="field is-grouped">
-        <label class="label">Family Name </label>
+        <label class="label">Family Name* </label>
         <div class="control">
-            <input class="input" v-model="lastName" type="text" placeholder="Text input">
+            <input class="input" v-model="lastName" type="text" placeholder="Burce">
         </div>
         </div>
         <!-- Family Name -->
         <div class="field is-grouped">
-        <label class="label">Given Name </label>
+        <label class="label">Given Name* </label>
         <div class="control">
-        <input class="input" v-model="firstName" type="text" placeholder="Text input">
+        <input class="input" v-model="firstName" type="text" placeholder="Wayne">
         </div>
         </div>
         <!-- Address -->
         <div class="field is-grouped">
-        <label class="label">Address </label>
+        <label class="label">Address* </label>
         <div class="control">
-        <input class="input" v-model="address" type="text" placeholder="Text input">
+        <input class="input" v-model="address" type="text" placeholder="10 Mary Street South Brisbane Brisbane QLD Australia ">
         </div>
         </div>
         <!-- Gender -->
         <div class="field is-grouped">
-        <label class="label">Gender </label>
+        <label class="label">Gender* </label>
         <div class="control">
             <label class="radio">
             <input type="radio" value="Male" v-model="gender" name="question">
@@ -39,9 +39,9 @@
         </div>
         <!-- Email-->
         <div class="field is-grouped">
-        <label class="label">Email </label>
+        <label class="label">Email* </label>
         <div class="control">
-        <input class="input" v-model="email" type="text" placeholder="Text input">
+        <input class="input" v-model="email" type="text" placeholder="abc@gmail.com">
         </div>
         </div>
 
@@ -49,28 +49,28 @@
         <div class="field is-grouped">
         <label class="label">FaceBook </label>
         <div class="control">
-        <input class="input" v-model="facebook" type="text" placeholder="Text input">
+        <input class="input" v-model="facebook" type="text" placeholder="Facebook ID">
         </div>
         </div>
         <!-- Phone Number-->
         <div class="field is-grouped">
-        <label class="label">Phone Number </label>
+        <label class="label">Phone Number* </label>
         <div class="control">
-        <input class="input" v-model="phoneNumber" type="text" placeholder="Text input">
+        <input class="input" v-model="phoneNumber" type="text" placeholder="phone number">
         </div>
         </div>
         <!-- Parent Name-->
         <div class="field is-grouped">
-        <label class="label">Parent Name</label>
+        <label class="label">Parent Name*</label>
         <div class="control">
-        <input class="input" v-model="parentName" type="text" placeholder="Text input">
+        <input class="input" v-model="parentName" type="text" placeholder="e.g. John Snow">
         </div>
         </div>
         <!-- Parent Phone Number-->
         <div class="field is-grouped">
-        <label class="label">Parent Phone Number</label>
+        <label class="label">Parent Phone Number*</label>
         <div class="control">
-        <input class="input" v-model="parentPhoneNumber" type="text" placeholder="Text input">
+        <input class="input" v-model="parentPhoneNumber" type="text" placeholder="phone number">
         </div>
         </div>
 
@@ -115,22 +115,54 @@ export default {
     },
     methods: {
         checkValid(){
+            // Regular Express for Email format
+            const emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+            /*
+                Initialise the alertMsg variable, it is used to pass the text string to alret the user
+                their information in incorrect
+            */
+            // Check Terms and Condition box is ticked
             var alertMsg = (this.termsChecked === false) ? "Please checked the terms of Condition check box" : null
+
+            // Check Parent Phone Number is valid
+            alertMsg = (!/^[0-9]*$/.test(this.parentPhoneNumber)) ? "parent phone number is invalid! only accept numbers!" : alertMsg
             alertMsg = (this.parentPhoneNumber.length != 9) ? "There must be 9 digit for the parent phone number!" : alertMsg
             alertMsg = (this.parentPhoneNumber.length === 0) ? "Please Insert Your parent phone Number !" : alertMsg
+
+            // Check parent Name is Valid
+            alertMsg = (!/^[a-zA-Z_ ]*$/.test(this.parentName)) ? "Invaild parent name detected! Only accept english letter!" : alertMsg
             alertMsg = (this.parentName.length === 0) ? "Please insert Your Parent full Name!" : alertMsg
+
+            // Check student phone number is Valid
+            alertMsg = (!/^[0-9]*$/.test(this.phoneNumber)) ? "phone number is invalid! only accept numbers!" : alertMsg
             alertMsg = (this.phoneNumber.length != 9) ? "There must be 9 digit for the phone number!" : alertMsg
             alertMsg = (this.phoneNumber.length === 0) ? "Please Insert Your Phone Number !" : alertMsg
+
+
+            // Check student email is Valid
+            alertMsg = (!emailRegex.test(this.email)) ? "Invalid emaill format detected! Please Correct it!" : alertMsg
             alertMsg = (this.email.length === 0) ? "Please insert Your Email Address!" : alertMsg
+
+            // Check student email is Valid
             alertMsg = (this.gender === '') ? "Please Select your gender!" : alertMsg
             alertMsg = (this.address.length === 0) ? "Please insert Your Address!" : alertMsg
-            alertMsg = (this.lastName.length === 0) ? "Please insert Your Given Name!" : alertMsg
-            alertMsg = (this.firstName.length === 0) ? "Please insert Your Family Name!" : alertMsg
 
+            // Check student firstname is Valid
+            alertMsg = (!/^[a-zA-Z]*$/.test(this.firstName)) ? "Given name is invalid! Only accept english letter!" : alertMsg
+            alertMsg = (this.firstName.length === 0) ? "Please insert Your Given Name!" : alertMsg
+
+            // Check student lastname is Valid
+            alertMsg = (!/^[a-zA-Z]*$/.test(this.lastName)) ? "Family name is invalid! Only accept english letter!" : alertMsg
+            alertMsg = (this.lastName.length === 0) ? "Please insert Your Family Name!" : alertMsg
+            
+            //  if alertMsg is holding values, means invalided value exist, then pass the msg alert box
             if (alertMsg != null){
                 this.showAlertMsg(alertMsg)
+                // return false for isValid properties
                 return false
             }
+            // return true for isValid properties
             return true
         },
         async submit_to_DB() {

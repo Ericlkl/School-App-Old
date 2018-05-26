@@ -68,26 +68,61 @@ export default {
             studentID: '',
             studentName: '',
             startDate: null,
-            endDate:null
+            endDate:null,
+            isValid: false
         }
     },
     methods: {
         checkValid(){
+            // Create Date Object for comparing start and end date
+            const start = new Date(this.startDate)
+            const end = new Date(this.endDate)
 
-            console.log(this.studentName)
-            // var start = new Date(this.startDate.slice(0,4),this.startDate.slice(5,7),this.startDate.slice(8,10))
-            var start = new Date(this.startDate)
-            var end = new Date(this.endDate)
-            console.log(start.getTime() === end.getTime())
-            console.log(start > end)
-            console.log(start < end)
+            // Testing for start date and end date
+            // only accept start date < end date
+            var alertMsg = (start.getTime() === end.getTime()) ? "Start Data and End date Cannot be same !" : null
+            alertMsg = (start > end) ? "The Start Date cannot earlier than end date! " : alertMsg
+            alertMsg = (this.endDate === null) ? "Please Select the end date !" : alertMsg
+            alertMsg = (this.startDate === null) ? "Please Select the start date !" : alertMsg
+
+            // Testing for student name input field, only accept english letter a-z, A-Z and space _ 
+            alertMsg = (!/^[a-zA-Z_ ]*$/.test(this.studentName)) ? "Invaild name detected! Only accept english letter!" : alertMsg
+            alertMsg = (this.studentName.length === 0) ? "Please insert Your Name!" : alertMsg
+
+            // Testing for student id input field, only accept numbers
+            alertMsg = (!/^[0-9]*$/.test(this.studentID)) ? "Student Number is inValid! It onlt accept numbers!" : alertMsg
+            alertMsg = (this.studentID.length === 0) ? "Please Insert Your Student Number !" : alertMsg
+
+            if (alertMsg != null){
+                this.showAlertMsg(alertMsg)
+                return false
+            }
+            // return true for isValid attribute
+            return true
 
         },
         success() {
+            this.isValid = this.checkValid()
+            if (!this.isValid){ return }
+
             this.$toast.open({
                 message: 'Your Request has been submited! Please come to Instrument room to get your instrument when you are free!',
                 type: 'is-success'
             })
+            this.resetValues()
+        },
+        showAlertMsg(msg){
+            this.$toast.open({
+                message: msg,
+                type: 'is-danger'
+            })
+        },
+        resetValues(){
+            this.studentID = ''
+            this.studentName = ''
+            this.startDate = null
+            this.endDate = null
+            this.isValid = false
         }
     }
 }
