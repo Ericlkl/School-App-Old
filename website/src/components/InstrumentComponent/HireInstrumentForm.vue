@@ -72,11 +72,18 @@ export default {
         }
     },
     methods: {
-        success() {
-            console.log(this.studentID)
+        checkValid(){
+
             console.log(this.studentName)
-            console.log(this.startDate)
-            console.log(this.endDate)
+            // var start = new Date(this.startDate.slice(0,4),this.startDate.slice(5,7),this.startDate.slice(8,10))
+            var start = new Date(this.startDate)
+            var end = new Date(this.endDate)
+            console.log(start.getTime() === end.getTime())
+            console.log(start > end)
+            console.log(start < end)
+
+        },
+        success() {
             this.$toast.open({
                 message: 'Your Request has been submited! Please come to Instrument room to get your instrument when you are free!',
                 type: 'is-success'

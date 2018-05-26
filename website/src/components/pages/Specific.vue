@@ -66,7 +66,6 @@ export default {
     methods: {
         register: function(){
             this.show = !this.show
-            console.log("Hello Eric")
         }
     }
   

@@ -52,57 +52,56 @@ import Connection from '../services/Connection'
                 phonenumber: '',
                 email: '',
                 message: '',
-                error: null,
             }
         },
         methods : {
-            showAlertMsg: function(msg){
+            resetInputField(){
+                this.fullname = ''
+                this.phonenumber =  ''
+                this.email =  ''
+                this.message =  ''
+            },
+            showAlertMsg(msg){
                 this.$toast.open({
                     message: msg,
                     type: 'is-danger'
                 })
             },
-            submitQuestion: function(){
-                // Test Case - Testing User Insert Validation
-                if (this.fullname.length === 0){
-                    this.showAlertMsg("Please insert Your Name!")
-                    return 
+            submitQuestion(){
+
+                var alertMsg = (this.message.length === 0) ? "Please insert Your Message!" : null
+                alertMsg = (this.phonenumber.length != 9) ? "There must be 9 digit for the phone number!" : alertMsg
+                alertMsg = (this.phonenumber.length === 0) ? "Please Insert Your Phone Number !" : alertMsg
+                alertMsg = (this.email.length === 0) ? "Please insert Your Email Address!" : alertMsg
+                alertMsg = (this.fullname.length === 0) ? "Please insert Your Name!" : alertMsg
+
+                if (alertMsg != null){
+                    this.showAlertMsg(alertMsg)
+                    return
                 }
-                if (this.email.length === 0){
-                    this.showAlertMsg("Please insert Your Email Address!")
-                    return 
-                }
-                if (this.phonenumber.length === 0){
-                    this.showAlertMsg("Please Insert Your Phone Number !")
-                    return 
-                } else if (this.phonenumber.length != 9){
-                    this.showAlertMsg("There must be 9 digit for the phone number!")
-                    return 
-                }
-                if (this.message.length === 0){
-                    this.showAlertMsg("Please insert Message field!")
-                    return 
-                }
+
                 // If it is correct, pass it into Database!
                 this.uploadQuestion()
             },
             async uploadQuestion() {
                 try {
+                    // Pass information to port 8081, then update database
                     const response = await Connection.submitQuestion({
                         FullName : this.fullname,
                         Email: this.email,
                         PhoneNumber: parseInt(this.phonenumber),
                         Message: this.message
                     })
-                    // show information box when it is success!
+                    // show information box if it is success!
                     this.$toast.open({
                         message: 'The contact form has been sent',
                         type: 'is-success'
-                    })           
+                    })
+                    // At the end, clear the data in input field
+                    this.resetInputField()
                 } catch (error){
-                    this.error = error.response.data.error
                     // show Alert box when it is Failed insert data to database!
-                    this.showAlertMsg(this.error)
+                    this.showAlertMsg(error.response.data.error)
                 }  
             }
         }
