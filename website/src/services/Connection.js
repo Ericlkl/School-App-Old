@@ -1,11 +1,11 @@
 import Api from './Api'
 
 export default {
-    apply(credentials){
-        return Api().post('apply',credentials)
+    submitQuestion(questions){
+        return Api().post('contact', questions)
     },
-    submitQuestion(credentials){
-        return Api().post('contact', credentials)
+    submitRegisterInfo(credentials) {
+        return Api().post('insert_Student', credentials)
     },
     getTutorsInfo(){
         return Api().get('show_tutors')
