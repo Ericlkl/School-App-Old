@@ -1,0 +1,986 @@
+Emmalululu (12):
+      Add files via upload
+      data flow diagram v1.0
+      Component V2
+      data model v2
+      Add files via upload
+      Delete Software Component Diagram - Page 1 (1).png
+      Add files via upload
+      Add files via upload
+      BPNM for "teacher application" & "hire instrument"
+      delete this version
+      BPMN for instrument hire
+      simple testing case added
+
+Ericlkl (1):
+      Add files via upload
+
+LEE KA LONG (31):
+      first commit
+      added check
+      added something Erick
+      added ERD and Class Diagram Final
+      updated
+      Fixed ERD and Added mySQL File
+      ERD,tutor Page,Event Page Finished
+      SQL insert Data added
+      ERD moved
+      Course Specific Page UI Finished
+      get_tutor Page improved and Terms and Condition Page Finished
+      Teacher Profile Page UI Finished
+      Server Side Basic Finished and can connect to Mysql
+      Added comment to Stas for Connect Mysql database
+      Contact US Page can send data to database successfully !!!!
+      Successfully pass data to get_tutor page and mySQL setup finish
+      Successfully pass data to get_tutor and mySQL setup finish
+      get_tutor page backend connected successfully
+      get_tutor page backend connected successfully
+      Event Page Backend completed
+      Course Page Backend finished, Improve UI Later
+      deleted unnessary file in server folder and added comment
+      Instrument Page UI Finished
+      Hire Instrument Page UI Finished
+      Instrument Backend Finished
+      Implemented Vuex Hire Instrument section is completed
+      BackEnd Data Can pass to TeacherProfile page successfully
+      Edited Static Content for Jesse
+      Banner added and some UI Text changed
+      Banner added and UI text fixed
+      move interface stuff to website folder and Npm run build successfully in website folder
+
+LEE KA LONG (Eric) (13):
+      Physical and Logical Diagram V1.0
+      Delete data flow v2 - Page 1.csv
+      Delete Software Component Diagram - Page 1.png
+      Add files via upload
+      Delete Software architecture pattern.docx
+      Add files via upload
+      Delete Physical and Logical Diagram.png
+      Delete Blank Diagram - Page 1.png
+      UI Design Draft
+      Class Diagram Prototype
+      Delete abc.js
+      Added Pineland Music School Data SQL file
+      Delete testing.json
+
+ShadeOps21 (10):
+      Data Flow Model - Student and Teacher interactions
+      UI near-final concepts
+      Add files via upload
+      Add files via upload
+      Add files via upload
+      Delete music school logo.xcf
+      Delete music school logo.png
+      Add files via upload
+      Delete music school logo v2.png
+      Add files via upload
+
+StanislavBerezin (25):
+      test run
+      folders
+      addedd interface and back-end skeleton
+      about us, courses main page done
+      added a few more things
+      Merge branch 'master' of https://github.com/Ericlkl/IFB299-Project
+      Added stuff for Eric
+      added Stas stuff
+      Merge branch 'master' of https://github.com/Ericlkl/IFB299-Project
+      added more
+      Seperation of duties during workship (artefact
+      changed a few files
+      Merge branch 'master' of https://github.com/Ericlkl/IFB299-Project
+      added aannouncments and changed about us, removed login for now
+      added a few fixes
+      found a bug, Eric fix it
+      need to insert dummy data straight
+      Done
+      need to find a way to use ur sql file, just plain sql text is not good enough, many syntax errors, need to model items better and remove things that are useless
+      github giving aids
+      UI design fixes
+      all UI improvments are done
+      fixed bug that didnt start the website
+      deleted interface
+      fixed bugs on the back-end, added populate sql, sometimes trying to sequalise before the db is created-> fixed with settimeout
+
+Zijun Lu (2):
+      Contact US Page Done
+      New UI prototype added
+
+* 3f5c6d1 fixed bugs on the back-end, added populate sql, sometimes trying to sequalise before the db is created-> fixed with settimeout
+* 7a9c5f1 deleted interface
+* 7299572 fixed bug that didnt start the website
+* 079e206 all UI improvments are done
+* 2162fe2 UI design fixes
+* 560611b move interface stuff to website folder and Npm run build successfully in website folder
+* 3041c0b github giving aids
+* 4f59c5e need to find a way to use ur sql file, just plain sql text is not good enough, many syntax errors, need to model items better and remove things that are useless
+* 39245b8 Done
+* d0c8450 need to insert dummy data straight
+* 2e45448 found a bug, Eric fix it
+*   d56321a Banner added and UI text fixed
+|\  
+| * 9356641 Delete testing.json
+| * c75919e Added Pineland Music School Data SQL file
+* | 13cc35d Banner added and some UI Text changed
+|/  
+*   7a6ca74 added a few fixes
+|\  
+| * 0bf93e3 Add files via upload
+| * 42dea83 Delete music school logo v2.png
+* | bcc79a2 added aannouncments and changed about us, removed login for now
+|/  
+*   be08986 Merge branch 'master' of https://github.com/Ericlkl/IFB299-Project
+|\  
+| * 51d5e22 Add files via upload
+| * 220fcf6 Delete music school logo.png
+| * 74cbb39 Delete music school logo.xcf
+* | 80a9b91 changed a few files
+|/  
+* ee1720f Add files via upload
+* ea06034 Edited Static Content for Jesse
+* cb17dc4 Add files via upload
+* 9a86f7b BackEnd Data Can pass to TeacherProfile page successfully
+* 36b92ad Implemented Vuex Hire Instrument section is completed
+* f96f937 Instrument Backend Finished
+* 16ae5f8 Hire Instrument Page UI Finished
+* ed67de2 simple testing case added
+* 6ce1c3c Seperation of duties during workship (artefact
+* b233c84 Instrument Page UI Finished
+* d05428e deleted unnessary file in server folder and added comment
+* 90e0b1f Course Page Backend finished, Improve UI Later
+* 29cd084 Event Page Backend completed
+* 695343f New UI prototype added
+*   58c5abb get_tutor page backend connected successfully
+|\  
+| * 1708d9e Add files via upload
+* | 96e9c8d get_tutor page backend connected successfully
+|/  
+*   1ad4d2c Successfully pass data to get_tutor and mySQL setup finish
+|\  
+| * 282e476 Delete abc.js
+* | b932f35 Successfully pass data to get_tutor page and mySQL setup finish
+|/  
+* 80766f7 Contact US Page can send data to database successfully !!!!
+* d3cf2f3 Added comment to Stas for Connect Mysql database
+* 4af4d06 Server Side Basic Finished and can connect to Mysql
+* 79a1922 Teacher Profile Page UI Finished
+* 398905c get_tutor Page improved and Terms and Condition Page Finished
+* f878108 Course Specific Page UI Finished
+* 8769c87 Contact US Page Done
+* b4896b4 ERD moved
+* 8e81a07 SQL insert Data added
+* f6f0bf9 BPMN for instrument hire
+* 503eb99 delete this version
+* 4351d5b ERD,tutor Page,Event Page Finished
+* 039b92f BPNM for "teacher application" & "hire instrument"
+* 17f6805 Fixed ERD and Added mySQL File
+* fe5ede4 added more
+*   ba0d01a Merge branch 'master' of https://github.com/Ericlkl/IFB299-Project
+|\  
+| *   638094f updated
+| |\  
+| * | 6075e42 added ERD and Class Diagram Final
+* | | 779da76 added Stas stuff
+| |/  
+|/|   
+* | 12da6b5 Added stuff for Eric
+|/  
+* 06afa61 added something Erick
+* 2190ce2 added check
+* 53c45c8 Add files via upload
+* 488453f Class Diagram Prototype
+* 8cc3004 UI Design Draft
+*   6f9b6ac Merge branch 'master' of https://github.com/Ericlkl/IFB299-Project
+|\  
+| * bdeff6d UI near-final concepts
+| * 0cc1fb2 Add files via upload
+* | 89e69f2 added a few more things
+|/  
+* 6ab4d42 about us, courses main page done
+* cca6971 addedd interface and back-end skeleton
+* 4b7fc2b folders
+* 43054bf test run
+* e3de233 Delete Software Component Diagram - Page 1 (1).png
+* 3e358ca Add files via upload
+* fdf0059 Delete Blank Diagram - Page 1.png
+* 48dc0da Delete Physical and Logical Diagram.png
+* 13374d1 Add files via upload
+* 698007b Delete Software architecture pattern.docx
+* 51cb3d3 Data Flow Model - Student and Teacher interactions
+* 813d0b1 Add files via upload
+* ac78fe6 Delete Software Component Diagram - Page 1.png
+* debbb0b Delete data flow v2 - Page 1.csv
+* d67beb1 data model v2
+* 1307d6c Component V2
+* e128e8a data flow diagram v1.0
+* a5f0d73 Physical and Logical Diagram V1.0
+* b44389d Add files via upload
+* 5919917 Add files via upload
+* 8d6c755 first commit
+commit 3f5c6d134f5c3b0628018959ef29a28843e55864
+Author: StanislavBerezin <stanislav_berezin@hotmail.com>
+Date:   Thu May 24 14:59:21 2018 +1000
+
+    fixed bugs on the back-end, added populate sql, sometimes trying to sequalise before the db is created-> fixed with settimeout
+
+ 7 files changed, 412 insertions(+), 378 deletions(-)
+
+commit 7a9c5f1b59e64a2e10b8ef3b36cf7d612c4d1be5
+Author: StanislavBerezin <stanislav_berezin@hotmail.com>
+Date:   Thu May 24 14:19:08 2018 +1000
+
+    deleted interface
+
+ 48 files changed, 11013 deletions(-)
+
+commit 7299572a99777b30897b89e63907fcf3a76fa634
+Author: StanislavBerezin <stanislav_berezin@hotmail.com>
+Date:   Thu May 24 14:18:22 2018 +1000
+
+    fixed bug that didnt start the website
+
+ 16 files changed, 119 insertions(+), 46 deletions(-)
+
+commit 079e206b1cb583f42155421787913d9ecda266fe
+Author: StanislavBerezin <stanislav_berezin@hotmail.com>
+Date:   Thu May 24 14:12:46 2018 +1000
+
+    all UI improvments are done
+
+ 6 files changed, 70 insertions(+), 15 deletions(-)
+
+commit 2162fe24b3be3f6a02cb751d601e99c88e37af6d
+Author: StanislavBerezin <stanislav_berezin@hotmail.com>
+Date:   Thu May 24 13:50:40 2018 +1000
+
+    UI design fixes
+
+ 13 files changed, 2438 insertions(+), 2250 deletions(-)
+
+commit 560611b7e25fa767881a8feed82553e8bfa9ffb9
+Author: LEE KA LONG <Erik@LEEs-MacBook-Pro.local>
+Date:   Thu May 24 11:13:56 2018 +1000
+
+    move interface stuff to website folder and Npm run build successfully in website folder
+
+ 79 files changed, 18176 insertions(+), 1610 deletions(-)
+
+commit 3041c0b9cfee1c679bb717e70345db344565dd1b
+Author: StanislavBerezin <stanislav_berezin@hotmail.com>
+Date:   Wed May 23 23:28:11 2018 +1000
+
+    github giving aids
+
+ 1 file changed, 1 insertion(+)
+
+commit 4f59c5e2e96d7d950aa3d3371d3c26154a69d15a
+Author: StanislavBerezin <stanislav_berezin@hotmail.com>
+Date:   Wed May 23 23:25:14 2018 +1000
+
+    need to find a way to use ur sql file, just plain sql text is not good enough, many syntax errors, need to model items better and remove things that are useless
+
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 39245b8e80154ac33782db2a499b97a8374eb878
+Author: StanislavBerezin <stanislav_berezin@hotmail.com>
+Date:   Wed May 23 23:18:40 2018 +1000
+
+    Done
+
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit d0c8450b21c6741baf2040f8d2ea8cf1d12d5803
+Author: StanislavBerezin <stanislav_berezin@hotmail.com>
+Date:   Wed May 23 23:12:58 2018 +1000
+
+    need to insert dummy data straight
+
+ 3 files changed, 27 insertions(+), 3 deletions(-)
+
+commit 2e454485dbd2c782cf07237b8ce1941643771242
+Author: StanislavBerezin <stanislav_berezin@hotmail.com>
+Date:   Wed May 23 22:50:42 2018 +1000
+
+    found a bug, Eric fix it
+
+ 7 files changed, 55 insertions(+), 24 deletions(-)
+
+commit d56321a39c6db2002ed028dd9b86640b58d7a7fa
+Merge: 13cc35d 9356641
+Author: LEE KA LONG <Erik@LEEs-MacBook-Pro.local>
+Date:   Wed May 23 22:00:59 2018 +1000
+
+    Banner added and UI text fixed
+
+commit 13cc35de0b7909b9934c3cba0c0c2d3e737ea3ec
+Author: LEE KA LONG <Erik@LEEs-MacBook-Pro.local>
+Date:   Wed May 23 21:59:16 2018 +1000
+
+    Banner added and some UI Text changed
+
+ 13 files changed, 277 insertions(+), 29 deletions(-)
+
+commit 935664179daef0582f678e0fe1caf5de1f2f3e38
+Author: LEE KA LONG (Eric) <33568780+Ericlkl@users.noreply.github.com>
+Date:   Tue May 22 00:52:15 2018 +1000
+
+    Delete testing.json
+
+ 1 file changed, 197 deletions(-)
+
+commit c75919e493a21a2e64428f76b4e86620ca50f373
+Author: LEE KA LONG (Eric) <33568780+Ericlkl@users.noreply.github.com>
+Date:   Tue May 22 00:30:07 2018 +1000
+
+    Added Pineland Music School Data SQL file
+    
+    Added Pineland Music School Data
+
+ 1 file changed, 173 insertions(+)
+
+commit 7a6ca74784cf7f023f4b6521b2a3ac4f67601838
+Merge: bcc79a2 0bf93e3
+Author: StanislavBerezin <stanislav_berezin@hotmail.com>
+Date:   Mon May 21 20:59:37 2018 +1000
+
+    added a few fixes
+
+commit bcc79a2960871737a5348d6ca4be75642a508001
+Author: StanislavBerezin <stanislav_berezin@hotmail.com>
+Date:   Mon May 21 20:55:22 2018 +1000
+
+    added aannouncments and changed about us, removed login for now
+
+ 6 files changed, 85 insertions(+), 11 deletions(-)
+
+commit 0bf93e3c63995bbd607f260de0b251e2644107ef
+Author: ShadeOps21 <36693625+ShadeOps21@users.noreply.github.com>
+Date:   Mon May 21 20:16:29 2018 +1000
+
+    Add files via upload
+
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 42dea830db08c0a657f31e00587dac797a6a1299
+Author: ShadeOps21 <36693625+ShadeOps21@users.noreply.github.com>
+Date:   Mon May 21 10:16:17 2018 +0000
+
+    Delete music school logo v2.png
+
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit be0898661a6328172d5fbde9f7c9f6804ec9d467
+Merge: 80a9b91 51d5e22
+Author: StanislavBerezin <stanislav_berezin@hotmail.com>
+Date:   Mon May 21 19:58:22 2018 +1000
+
+    Merge branch 'master' of https://github.com/Ericlkl/IFB299-Project
+
+commit 80a9b918d73a1ab1f856415048e0832901384647
+Author: StanislavBerezin <stanislav_berezin@hotmail.com>
+Date:   Mon May 21 19:58:11 2018 +1000
+
+    changed a few files
+
+ 1163 files changed, 9102 insertions(+), 76424 deletions(-)
+
+commit 51d5e2277e5cf572fd5cef84b61efa923fba021c
+Author: ShadeOps21 <36693625+ShadeOps21@users.noreply.github.com>
+Date:   Mon May 21 19:55:19 2018 +1000
+
+    Add files via upload
+
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 220fcf6c23f5409f22664460720dbd06228c4b80
+Author: ShadeOps21 <36693625+ShadeOps21@users.noreply.github.com>
+Date:   Mon May 21 09:55:04 2018 +0000
+
+    Delete music school logo.png
+
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 74cbb398ed76d951c71d3265f809290a25a23c38
+Author: ShadeOps21 <36693625+ShadeOps21@users.noreply.github.com>
+Date:   Mon May 21 09:55:02 2018 +0000
+
+    Delete music school logo.xcf
+
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit ee1720fcab823b2ca621751b44942da71c025d0a
+Author: ShadeOps21 <36693625+ShadeOps21@users.noreply.github.com>
+Date:   Mon May 21 14:41:33 2018 +1000
+
+    Add files via upload
+
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit ea0603468e8b37d9a734df6d8d8c29932d5ac3c8
+Author: LEE KA LONG <Erik@LEEs-MacBook-Pro.local>
+Date:   Mon May 21 14:11:54 2018 +1000
+
+    Edited Static Content for Jesse
+
+ 2 files changed, 5 insertions(+)
+
+commit cb17dc404e55169a44b5903076984e17645b676d
+Author: ShadeOps21 <36693625+ShadeOps21@users.noreply.github.com>
+Date:   Mon May 21 10:12:52 2018 +1000
+
+    Add files via upload
+    
+    GIMP source file and flattened .png file for website logo
+
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 9a86f7bb0a988e1230fae175e85c3b9e9474c65e
+Author: LEE KA LONG <Erik@LEEs-MBP.home>
+Date:   Mon May 21 04:18:35 2018 +1000
+
+    BackEnd Data Can pass to TeacherProfile page successfully
+
+ 3 files changed, 24 insertions(+), 28 deletions(-)
+
+commit 36b92add39e6ea0aee5aa0e6308e40b024a62e21
+Author: LEE KA LONG <Erik@LEEs-MBP.home>
+Date:   Mon May 21 03:53:08 2018 +1000
+
+    Implemented Vuex Hire Instrument section is completed
+
+ 5 files changed, 21 insertions(+), 20 deletions(-)
+
+commit f96f937aa1d4bf222be8b89c0648f382992517d3
+Author: LEE KA LONG <Erik@LEEs-MBP.home>
+Date:   Mon May 21 01:21:59 2018 +1000
+
+    Instrument Backend Finished
+
+ 10 files changed, 157 insertions(+), 17 deletions(-)
+
+commit 16ae5f8cdb057efcd630d40473ff6fc0a04ed63b
+Author: LEE KA LONG <Erik@LEEs-MBP.home>
+Date:   Mon May 21 00:10:05 2018 +1000
+
+    Hire Instrument Page UI Finished
+
+ 2 files changed, 97 insertions(+), 5 deletions(-)
+
+commit ed67de2335bb28ee543da9c7d460c000d07f8e85
+Author: Emmalululu <36693909+Emmalululu@users.noreply.github.com>
+Date:   Sun May 20 23:17:56 2018 +1000
+
+    simple testing case added
+
+ 1 file changed, 2 insertions(+)
+
+commit 6ce1c3cdca4097eae2e1313369126c59a7c84713
+Author: StanislavBerezin <33718805+StanislavBerezin@users.noreply.github.com>
+Date:   Sun May 20 23:10:58 2018 +1000
+
+    Seperation of duties during workship (artefact
+
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit b233c848e8ad3d89f70597434e45fc1538261255
+Author: LEE KA LONG <Erik@LEEs-MBP.home>
+Date:   Sun May 20 15:30:10 2018 +1000
+
+    Instrument Page UI Finished
+
+ 7 files changed, 121 insertions(+), 13 deletions(-)
+
+commit d05428ef6ccc0fe2881127095daf16cad444a665
+Author: LEE KA LONG <Erik@LEEs-MacBook-Pro.local>
+Date:   Sun May 20 01:32:42 2018 +1000
+
+    deleted unnessary file in server folder and added comment
+
+ 6 files changed, 16 insertions(+), 99 deletions(-)
+
+commit 90e0b1f0230d007b589ad1befacc86c398ef5c87
+Author: LEE KA LONG <Erik@LEEs-MacBook-Pro.local>
+Date:   Sun May 20 01:20:45 2018 +1000
+
+    Course Page Backend finished, Improve UI Later
+
+ 10 files changed, 256 insertions(+), 77 deletions(-)
+
+commit 29cd084fc80cc76db211ff26f5f23538eacb6d0f
+Author: LEE KA LONG <Erik@LEEs-MacBook-Pro.local>
+Date:   Sat May 19 22:09:59 2018 +1000
+
+    Event Page Backend completed
+
+ 13 files changed, 335 insertions(+), 187 deletions(-)
+
+commit 695343fddd2f06d714f0e3c31cfe060deed01373
+Author: Zijun Lu <zijunlu@ZijundeMacBook-Pro.local>
+Date:   Sat May 19 21:37:49 2018 +1000
+
+    New UI prototype added
+
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 58c5abb38c18c2aca54e483dd2ba1413639b56eb
+Merge: 96e9c8d 1708d9e
+Author: LEE KA LONG <Erik@LEEs-MacBook-Pro.local>
+Date:   Sat May 19 19:46:54 2018 +1000
+
+    get_tutor page backend connected successfully
+
+commit 96e9c8d16d8633a6852b8d521a60ea73bd2ee4e2
+Author: LEE KA LONG <Erik@LEEs-MacBook-Pro.local>
+Date:   Sat May 19 19:44:58 2018 +1000
+
+    get_tutor page backend connected successfully
+
+ 2 files changed, 23 insertions(+), 17 deletions(-)
+
+commit 1708d9e347edb6990e9802b0fe26c6f50941121d
+Author: ShadeOps21 <36693625+ShadeOps21@users.noreply.github.com>
+Date:   Sat May 19 17:34:45 2018 +1000
+
+    Add files via upload
+    
+    First version of static text content for the site - about us, basic course information, etc etc
+
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 1ad4d2c6cf9e0bd40315a0ec9108478387c6f21f
+Merge: b932f35 282e476
+Author: LEE KA LONG <Erik@LEEs-MacBook-Pro.local>
+Date:   Sat May 19 14:07:44 2018 +1000
+
+    Successfully pass data to get_tutor and mySQL setup finish
+
+commit b932f352fae8c1f7117b24a225966c52a0ef40e5
+Author: LEE KA LONG <Erik@LEEs-MacBook-Pro.local>
+Date:   Sat May 19 14:04:11 2018 +1000
+
+    Successfully pass data to get_tutor page and mySQL setup finish
+
+ 11 files changed, 144 insertions(+), 54 deletions(-)
+
+commit 282e4764ea1c096c34e52b4c967c3c0172cbfe00
+Author: LEE KA LONG (Eric) <33568780+Ericlkl@users.noreply.github.com>
+Date:   Fri May 18 21:44:34 2018 +1000
+
+    Delete abc.js
+
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 80766f73c7a68f255a4a069bdcec992e42648b8a
+Author: LEE KA LONG <Erik@LEEs-MacBook-Pro.local>
+Date:   Fri May 18 21:43:47 2018 +1000
+
+    Contact US Page can send data to database successfully !!!!
+
+ 17 files changed, 428 insertions(+), 44 deletions(-)
+
+commit d3cf2f320e31d9ff2b11ddfd0a8d19053e000bf8
+Author: LEE KA LONG <Erik@LEEs-MacBook-Pro.local>
+Date:   Thu May 17 22:57:15 2018 +1000
+
+    Added comment to Stas for Connect Mysql database
+
+ 1 file changed, 8 insertions(+)
+
+commit 4af4d063ccb4f2b520bef479e61cc13c31c0bc8f
+Author: LEE KA LONG <Erik@LEEs-MacBook-Pro.local>
+Date:   Thu May 17 22:50:31 2018 +1000
+
+    Server Side Basic Finished and can connect to Mysql
+
+ 6935 files changed, 981269 insertions(+), 576 deletions(-)
+
+commit 79a1922a742a00fe495ba0903f50dc1510985397
+Author: LEE KA LONG <Erik@LEEs-MacBook-Pro.local>
+Date:   Thu May 17 17:00:36 2018 +1000
+
+    Teacher Profile Page UI Finished
+
+ 5 files changed, 112 insertions(+), 11 deletions(-)
+
+commit 398905c4baa5a39d89601acbd69215610505374e
+Author: LEE KA LONG <Erik@LEEs-MacBook-Pro.local>
+Date:   Thu May 17 14:27:50 2018 +1000
+
+    get_tutor Page improved and Terms and Condition Page Finished
+
+ 16 files changed, 365 insertions(+), 230 deletions(-)
+
+commit f8781087a3a12a42c50ff1e389b3bbd380f6853d
+Author: LEE KA LONG <Erik@LEEs-MacBook-Pro.local>
+Date:   Thu May 17 13:15:07 2018 +1000
+
+    Course Specific Page UI Finished
+
+ 12 files changed, 1795 insertions(+), 1546 deletions(-)
+
+commit 8769c879c54fe78979bd46fbe021f3a4790b6c2a
+Author: Zijun Lu <zijunlu@ZijundeMacBook-Pro.local>
+Date:   Fri May 4 23:22:21 2018 +1000
+
+    Contact US Page Done
+
+ 4 files changed, 1512 insertions(+), 1493 deletions(-)
+
+commit b4896b486190acda56a06273842aed19891bf695
+Author: LEE KA LONG <Erik@LEEs-MacBook-Pro.local>
+Date:   Fri May 4 22:27:59 2018 +1000
+
+    ERD moved
+
+ 4 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 8e81a0751599c227564cbfd94f13906a505840e3
+Author: LEE KA LONG <Erik@LEEs-MacBook-Pro.local>
+Date:   Fri May 4 22:26:18 2018 +1000
+
+    SQL insert Data added
+
+ 2 files changed, 55 insertions(+), 17 deletions(-)
+
+commit f6f0bf9bb44d70e719b22564d2c94da247e8c2b7
+Author: Emmalululu <36693909+Emmalululu@users.noreply.github.com>
+Date:   Fri May 4 21:20:14 2018 +1000
+
+    BPMN for instrument hire
+
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 503eb99dbaea2b65eb2c46fffe8ed2b2f9a05440
+Author: Emmalululu <36693909+Emmalululu@users.noreply.github.com>
+Date:   Fri May 4 21:19:28 2018 +1000
+
+    delete this version
+
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 4351d5b19fdb8d75ab14cb3ebbd195ae862f6045
+Author: LEE KA LONG <Erik@LEEs-MacBook-Pro.local>
+Date:   Fri May 4 20:28:07 2018 +1000
+
+    ERD,tutor Page,Event Page Finished
+
+ 11 files changed, 205 insertions(+), 4 deletions(-)
+
+commit 039b92ff13ffb20eb3d29ce36e15f8ba31db521b
+Author: Emmalululu <36693909+Emmalululu@users.noreply.github.com>
+Date:   Fri May 4 12:54:26 2018 +1000
+
+    BPNM for "teacher application" & "hire instrument"
+
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 17f68052ed1cebf5ce5cb99cb76e2ec762e0f446
+Author: LEE KA LONG <Erik@LEEs-MacBook-Pro.local>
+Date:   Thu May 3 19:43:17 2018 +1000
+
+    Fixed ERD and Added mySQL File
+
+ 5 files changed, 83 insertions(+)
+
+commit fe5ede4ee1dfd164bc22a31b04a8c7ce4844ef50
+Author: StanislavBerezin <stanislav_berezin@hotmail.com>
+Date:   Thu May 3 19:23:07 2018 +1000
+
+    added more
+
+ 8 files changed, 16 insertions(+), 3 deletions(-)
+
+commit ba0d01a9b582319214f0522564f56b3042d64b61
+Merge: 779da76 638094f
+Author: StanislavBerezin <stanislav_berezin@hotmail.com>
+Date:   Thu May 3 18:42:29 2018 +1000
+
+    Merge branch 'master' of https://github.com/Ericlkl/IFB299-Project
+
+commit 779da761c0a293c73e0344fda8a90019bdee64c2
+Author: StanislavBerezin <stanislav_berezin@hotmail.com>
+Date:   Thu May 3 18:41:59 2018 +1000
+
+    added Stas stuff
+
+ 5 files changed, 2 insertions(+), 2 deletions(-)
+
+commit 638094f104751c4b3c6a109d6d966e5d6c1ebbd8
+Merge: 6075e42 12da6b5
+Author: LEE KA LONG <Erik@LEEs-MBP.home>
+Date:   Thu May 3 18:17:49 2018 +1000
+
+    updated
+
+commit 6075e42866b43afcd024f29a327de4a8ece85394
+Author: LEE KA LONG <Erik@LEEs-MBP.home>
+Date:   Thu May 3 18:17:03 2018 +1000
+
+    added ERD and Class Diagram Final
+
+ 72 files changed, 2161 insertions(+), 1974 deletions(-)
+
+commit 12da6b5da801f1ad5d02ebbe869db0aafcecdaa1
+Author: StanislavBerezin <stanislav_berezin@hotmail.com>
+Date:   Thu May 3 17:46:20 2018 +1000
+
+    Added stuff for Eric
+
+ 9 files changed, 188 insertions(+), 1 deletion(-)
+
+commit 06afa614ead1b6ab06b20c5d0d08a70b1cf62a67
+Author: LEE KA LONG <Erik@LEEs-MacBook-Pro.local>
+Date:   Wed May 2 18:28:58 2018 +1000
+
+    added something Erick
+
+ 4 files changed, 31 insertions(+), 4 deletions(-)
+
+commit 2190ce268dbca5f95666138642660cba1506c52a
+Author: LEE KA LONG <Erik@LEEs-MacBook-Pro.local>
+Date:   Wed May 2 18:12:39 2018 +1000
+
+    added check
+
+ 2 files changed, 121 insertions(+), 121 deletions(-)
+
+commit 53c45c8ebb297fca391538adf0de5c65b14db486
+Author: Emmalululu <36693909+Emmalululu@users.noreply.github.com>
+Date:   Tue May 1 23:06:03 2018 +1000
+
+    Add files via upload
+
+ 1 file changed, 12 insertions(+)
+
+commit 488453ffaa1b03e57f1f90c98035b12a43b7f7ad
+Author: LEE KA LONG (Eric) <33568780+Ericlkl@users.noreply.github.com>
+Date:   Tue May 1 19:44:24 2018 +1000
+
+    Class Diagram Prototype
+    
+    Class Diagram Prototype
+
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 8cc300472ac7a4a53d00bb3c9bcc0555d1b7f1b7
+Author: LEE KA LONG (Eric) <33568780+Ericlkl@users.noreply.github.com>
+Date:   Tue May 1 19:42:29 2018 +1000
+
+    UI Design Draft
+    
+    UI Design Draft
+
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 6f9b6acd9228672b2ecf55f94257aa899b26bf53
+Merge: 89e69f2 bdeff6d
+Author: StanislavBerezin <stanislav_berezin@hotmail.com>
+Date:   Sun Apr 29 17:11:46 2018 +1000
+
+    Merge branch 'master' of https://github.com/Ericlkl/IFB299-Project
+
+commit 89e69f217c4cac7623dbb5007e4141183d1a45ed
+Author: StanislavBerezin <stanislav_berezin@hotmail.com>
+Date:   Sun Apr 29 17:08:57 2018 +1000
+
+    added a few more things
+
+ 6 files changed, 200 insertions(+), 8 deletions(-)
+
+commit bdeff6d3ad79434a14f393f80a1a461cbe9efcd3
+Author: ShadeOps21 <36693625+ShadeOps21@users.noreply.github.com>
+Date:   Sun Apr 29 10:54:13 2018 +1000
+
+    UI near-final concepts
+    
+    General site info, course info type 1, bottom-of-page hyperlink/nav bar.
+
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 0cc1fb2123da4e94929d0edd67072b0e463dea33
+Author: Emmalululu <36693909+Emmalululu@users.noreply.github.com>
+Date:   Thu Apr 26 17:34:15 2018 +1000
+
+    Add files via upload
+    
+    UI design Prototype
+
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 6ab4d429e20517b945fc23290a126f81ed77260b
+Author: StanislavBerezin <stanislav_berezin@hotmail.com>
+Date:   Mon Apr 23 20:34:08 2018 +1000
+
+    about us, courses main page done
+
+ 16 files changed, 750 insertions(+), 54 deletions(-)
+
+commit cca69719101ece11d3c525fe15e16671204c50c2
+Author: StanislavBerezin <stanislav_berezin@hotmail.com>
+Date:   Sun Apr 22 20:58:27 2018 +1000
+
+    addedd interface and back-end skeleton
+
+ 16 files changed, 8553 insertions(+)
+
+commit 4b7fc2bfbfb2638aa78bc724f8de8e099f3b2ab8
+Author: StanislavBerezin <stanislav_berezin@hotmail.com>
+Date:   Sun Apr 22 20:13:20 2018 +1000
+
+    folders
+
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 43054bfba8d2b680f684d100811ce67f47c2c7a9
+Author: StanislavBerezin <stanislav_berezin@hotmail.com>
+Date:   Sun Apr 22 20:08:36 2018 +1000
+
+    test run
+
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit e3de23356018b02a1f352f402518366376e0ead4
+Author: Emmalululu <36693909+Emmalululu@users.noreply.github.com>
+Date:   Wed Apr 18 22:49:31 2018 +1000
+
+    Delete Software Component Diagram - Page 1 (1).png
+
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 3e358ca9bc92377185cf6c88dfaf52d1c40c5b7d
+Author: Emmalululu <36693909+Emmalululu@users.noreply.github.com>
+Date:   Wed Apr 18 22:48:55 2018 +1000
+
+    Add files via upload
+    
+    Software Component Diagram Final Version
+
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit fdf0059c02ecaca9d14e1056d7ff1b82bfc8107d
+Author: LEE KA LONG (Eric) <33568780+Ericlkl@users.noreply.github.com>
+Date:   Wed Apr 18 22:39:18 2018 +1000
+
+    Delete Blank Diagram - Page 1.png
+
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 48dc0da202ad92222f8d8c1306f5eff521d94844
+Author: LEE KA LONG (Eric) <33568780+Ericlkl@users.noreply.github.com>
+Date:   Wed Apr 18 22:38:22 2018 +1000
+
+    Delete Physical and Logical Diagram.png
+
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 13374d15256a113a4f6d19b0973da2e3bbe1f015
+Author: LEE KA LONG (Eric) <33568780+Ericlkl@users.noreply.github.com>
+Date:   Wed Apr 18 22:37:56 2018 +1000
+
+    Add files via upload
+    
+    Description of Software architecture pattern for Pineland music School case
+
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 698007b9d807b1983b2fa914ef582e5e884df629
+Author: LEE KA LONG (Eric) <33568780+Ericlkl@users.noreply.github.com>
+Date:   Wed Apr 18 22:36:15 2018 +1000
+
+    Delete Software architecture pattern.docx
+
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 51cb3d30d2c906186409c83650b642c4c3b026e4
+Author: ShadeOps21 <36693625+ShadeOps21@users.noreply.github.com>
+Date:   Wed Apr 18 21:57:00 2018 +1000
+
+    Data Flow Model - Student and Teacher interactions
+
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 813d0b1b9fc2eda2397757aa34179ba645e7c214
+Author: LEE KA LONG (Eric) <33568780+Ericlkl@users.noreply.github.com>
+Date:   Wed Apr 18 19:41:20 2018 +1000
+
+    Add files via upload
+    
+    Logical and Physical Diagram Final Version
+
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit ac78fe6d14cb7da1784ce76d02d5e30305eb9736
+Author: LEE KA LONG (Eric) <33568780+Ericlkl@users.noreply.github.com>
+Date:   Wed Apr 18 19:33:33 2018 +1000
+
+    Delete Software Component Diagram - Page 1.png
+
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit debbb0bf2c5ae456635d0487f64fc3df1c003bb2
+Author: LEE KA LONG (Eric) <33568780+Ericlkl@users.noreply.github.com>
+Date:   Wed Apr 18 19:33:15 2018 +1000
+
+    Delete data flow v2 - Page 1.csv
+
+ 1 file changed, 22 deletions(-)
+
+commit d67beb1759ce14181e2af1ee4b54d7834cc75ea9
+Author: Emmalululu <36693909+Emmalululu@users.noreply.github.com>
+Date:   Wed Apr 18 19:01:50 2018 +1000
+
+    data model v2
+
+ 1 file changed, 22 insertions(+)
+
+commit 1307d6c50bbe4b27832187f82de88a6b6e6e045b
+Author: Emmalululu <36693909+Emmalululu@users.noreply.github.com>
+Date:   Wed Apr 18 18:19:28 2018 +1000
+
+    Component V2
+
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit e128e8a717f4c69da4e78f63dc1bda603bf667f6
+Author: Emmalululu <36693909+Emmalululu@users.noreply.github.com>
+Date:   Wed Apr 18 17:42:17 2018 +1000
+
+    data flow diagram v1.0
+
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit a5f0d739d0382e48d9bf7ec307dbcaa678d7d7d0
+Author: LEE KA LONG (Eric) <33568780+Ericlkl@users.noreply.github.com>
+Date:   Wed Apr 18 17:25:56 2018 +1000
+
+    Physical and Logical Diagram V1.0
+
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit b44389d397c663518b13f940a8d6604392a5c3c5
+Author: Emmalululu <36693909+Emmalululu@users.noreply.github.com>
+Date:   Wed Apr 18 16:52:16 2018 +1000
+
+    Add files via upload
+    
+    Software Component Diagram V1.0
+
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 59199178168843c80455a4f07b16405a7973963c
+Author: Ericlkl <33568780+Ericlkl@users.noreply.github.com>
+Date:   Wed Apr 18 15:30:55 2018 +1000
+
+    Add files via upload
+    
+    Software Architecture pattern for this case
+
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 8d6c7557f20b9a0b10e515e4fa9e393aeed4ebb8
+Author: LEE KA LONG <Erik@LEEs-MBP.home>
+Date:   Tue Mar 13 22:08:51 2018 +1000
+
+    first commit
+
+ 7 files changed, 474 insertions(+)

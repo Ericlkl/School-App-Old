@@ -51,7 +51,7 @@ export default {
 }
 .text p{
     
-    margin-top:10px;
+    margin-top:11px;
 }
 .card:hover{
    opacity:0.9;

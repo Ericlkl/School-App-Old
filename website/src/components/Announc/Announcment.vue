@@ -1,6 +1,6 @@
 <template>
     <div class = "card">
-        <router-link :to = "{name: 'specific'}">
+
         <img v-bind:src="img" >
         <div class="text">
             <h1 class="subtitle is-4">{{title}} </h1>
@@ -9,7 +9,7 @@
 
             <p>Price: {{entry}} </p>   
         </div>
-    </router-link>
+
   </div>
 </template>
 <script>
@@ -30,6 +30,11 @@ export default {
     margin-top:40px;
     transition: 0.5s ease-in-out;
 }
+
+.text p{
+    
+    margin-top:10px;
+}
 .text{
     border-top:1px solid #dfe6e9;
     color:#4a4a4a;
@@ -40,10 +45,5 @@ export default {
     opacity:0.9;
     overflow: hidden;
 }
-.text p{
-    
-    margin-top:10px;
-}
-
 
 </style>

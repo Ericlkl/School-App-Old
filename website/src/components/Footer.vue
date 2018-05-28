@@ -68,7 +68,7 @@ import Oops from './Oops'
 </script>
 <style lang="css" scoped>
   .foot {
-    margin-top: 5rem;
+    margin-top: 4rem;
     background-color: #272727;
     padding: 1rem;
   }
@@ -81,7 +81,7 @@ import Oops from './Oops'
     justify-content: space-around;
     margin: 0 auto;
     width: 80%;
-    margin-top: 5rem;
+    margin-top: 4rem;
   }
 
   .flex-row ul li {
