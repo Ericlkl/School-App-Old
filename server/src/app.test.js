@@ -111,4 +111,55 @@ describe("Testing events routes", ()=>{
             })
             .end(done);
     })
+
+    it("This should insert event into db", (done)=>{
+        var event = {
+            EventName: 'MisterX',
+            Tag: 'mister',
+            Company: 'misterXCorp',
+            Description: 'Mister x came here',
+            Instrument: 'Violin',
+            Place: 'home',
+            Time: '14-00',
+            Date: '14/11/2018',
+            Image_URL: 'www.google.com'
+        }
+        request(app)
+            .post('/insert_event')
+            .send(event)
+            .end(done);
+    })
+})
+
+
+describe("Testing Courses", ()=>{
+    it("This should show all courses available", (done)=>{
+        request(app)
+            .get('/show_course')
+            .expect((res)=>{
+                 expect(res.body).to.have.with.lengthOf(4);
+            })
+            .end(done);
+    })
+
+    it("This should insert a new course into db", (done)=>{
+        var courses = {
+            CourseName: 'MisterX',
+            Description: 'Mister x came here',
+            Requirement: 'inter',
+            TutionFee: 120,
+            Period: '2 week',
+            Time: '14-00',
+            Day: '14/11/2018',
+            NumberOfStudent: 10,
+            Instrument: 'Violin',
+            Teacher: "MisterX",
+            Image_URL: 'www.google.com',
+        }
+        request(app)
+            .post('/insert_course')
+            .send(courses)
+            .end(done);
+
+    })
 })
