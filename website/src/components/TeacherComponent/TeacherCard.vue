@@ -40,11 +40,6 @@
 
 export default {
   props: ['tutor'],
-  watch : {
-      tutor: function(val) {
-            this.tutor = val
-      }
-  },
   methods: {
     goToTeacherProfile() {
       // pass the tutor object Using Vuex to store the data in global

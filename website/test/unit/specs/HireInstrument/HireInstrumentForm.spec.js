@@ -13,7 +13,8 @@ const dummy_data = {
 // Create a EventCard Vue Instance for checking
 const wrapper = shallowMount(HireInstrumentForm)
 wrapper.setData({
-    dataPackage: dummy_data
+    dataPackage: dummy_data,
+    inBrowser: false
 })
 
 describe('HireInstrumentForm', () => {
@@ -33,6 +34,7 @@ describe('HireInstrumentForm', () => {
         expect(wrapper.vm.dataPackage.studentName).to.equal("")
         expect(wrapper.vm.dataPackage.startDate).to.equal(null)
         expect(wrapper.vm.dataPackage.endDate).to.equal(null)
+        expect(wrapper.vm.inBrowser).to.equal(false)
     })
 
 })

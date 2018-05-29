@@ -32,18 +32,21 @@
 <script>
 
     export default {
+        data(){
+            return {
+                inBrowser: true
+            }
+        },
         props: ['instrument'],
         methods : {
             goToHireInstrument() {
-                // pass the instrument object Using Vuex to store the data in global
-                this.$store.state.specific.instrument = this.instrument
-                // Then go to hire instrument page
-                this.$router.push('hire_instrument')
-            }
-        },
-        watch: {
-            event: function(value){
-                this.instrument = value
+                if (this.inBrowser){
+                    // pass the instrument object Using Vuex to store the data in global
+                    this.$store.state.specific.instrument = this.instrument
+                    // Then go to hire instrument page
+                    this.$router.push('hire_instrument')
+                }
+                return "In hire instrument page"
             }
         }
     }

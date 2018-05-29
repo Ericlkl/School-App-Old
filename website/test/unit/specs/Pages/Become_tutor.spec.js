@@ -17,7 +17,8 @@ const dummy_data = {
 const wrapper = shallowMount(Become_tutor)
 
 wrapper.setData({
-    data_package: dummy_data
+    data_package: dummy_data,
+    inBrowser: false
 })
 
 describe('Become_tutor', () => {

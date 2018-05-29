@@ -52,15 +52,10 @@ export default {
           try {
             this.received.eventList = (await Connection.getEventsInfo() ).data
             this.num_of_Events = this.received.eventList.length
-            console.log(this.received.eventList)
+            return "Connection Success"
           } catch(error){
-            console.log(error)
+            return "Connection Fail"
           }
-      }
-    },
-    watch : {
-      received: function(val){
-        this.received = val
       }
     },
     mounted() {

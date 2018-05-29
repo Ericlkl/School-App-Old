@@ -52,15 +52,10 @@ export default {
                 this.received.tutorList = (await Connection.getTutorsInfo()).data
                 // calculate how many teacher do we have
                 this.num_of_tutors = this.received.tutorList.length
-                console.log(this.received.tutorList)
+                return "Connection Success"
             } catch (error){
-                console.log(error)
+                return "Connection Fail"
             }
-        }
-    },
-    watch : {
-        received: function(val) {
-            this.received = val
         }
     },
     mounted() {

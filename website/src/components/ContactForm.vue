@@ -53,7 +53,8 @@ import ValidationController from '../../checkValidation/ValidationController'
                     phonenumber: '',
                     email: '',
                     message: '',
-                }
+                },
+                inBrowser: true
             }
         },
         methods : {
@@ -71,11 +72,13 @@ import ValidationController from '../../checkValidation/ValidationController'
 
                 if (alertMsg != null){
                     //show alert Msg box
-                    this.$toast.open({
+                    if(this.inBrowser){
+                        this.$toast.open({
                         // print the alert message
                         message: alertMsg,
                         type: 'is-danger'
-                    })
+                        })
+                    }
                     return "text is invalid"
                 }
 
@@ -88,23 +91,26 @@ import ValidationController from '../../checkValidation/ValidationController'
                         Message: this.dataPackage.message
                     })
                     // show information box if it is success!
-                    this.$toast.open({
-                        message: 'The contact form has been sent',
-                        type: 'is-success'
-                    })
+                    if (this.inBrowser){
+                        this.$toast.open({
+                            message: 'The contact form has been sent',
+                            type: 'is-success'
+                        })
+                    }
                     // At the end, clear the data in input field
                     this.resetInputField()
                     // after one second, go back to the home page
                     setTimeout( () => this.$router.push('/'),1000)
-                    return "Success"
+                    return "Connection Success"
 
                 } catch (error){
                     // show Alert box when it is Failed insert data to database!
-                    console.log("Can not upload the data, Connection Problem")
-                    this.$toast.open({
-                        message: "Can not upload the data, Connection Problem",
-                        type: 'is-danger'
-                    })
+                    if(this.inBrowser){
+                        this.$toast.open({
+                            message: "Can not upload the data, Connection Problem",
+                            type: 'is-danger'
+                        })
+                    }
                     return "Connection Fail"
                 }  
             }

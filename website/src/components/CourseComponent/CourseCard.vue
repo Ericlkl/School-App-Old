@@ -1,28 +1,23 @@
 <template>
     <div class = "card">
         <router-link :to = "{name: 'specific'}">
-        <img v-bind:src="event.Image_URL">
+        <img v-bind:src="course.Image_URL">
         <div class="text">
-            <h4 class='subtitle is-5'>{{event.CourseName}}</h4>
-            <h4>Price : {{event.TutionFee}}</h4>
-            <h4>Period : {{event.Period}}</h4>
-            <h4>Time : {{event.Day}} {{event.Time}}</h4>
-            <h4>Student: {{event.NumbersOfStudent}}</h4>
-            <p>By {{event.Teacher}}</p>   
+            <h4 class='subtitle is-5'>{{course.CourseName}}</h4>
+            <h4>Price : {{course.TutionFee}}</h4>
+            <h4>Period : {{course.Period}}</h4>
+            <h4>Time : {{course.Day}} {{course.Time}}</h4>
+            <h4>Student: {{course.NumbersOfStudent}}</h4>
+            <p>By {{course.Teacher}}</p>   
         </div>
     </router-link>
   </div>
 </template>
 <script>
 
+
 export default {
-  props: ['event'],
-  watch : {
-        event: function(val) {
-            this.tutor = val
-        }
-  }
-  
+  props: ['course']  
 }
 </script>
 <style scoped>

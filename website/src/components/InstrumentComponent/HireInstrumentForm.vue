@@ -71,7 +71,8 @@ export default {
                 studentName: '',
                 startDate: null,
                 endDate:null
-            }
+            },
+            inBrowser: true
         }
     },
     methods: {
@@ -82,22 +83,26 @@ export default {
             // If any data is not valid, alertMsg will generate from ValidationController
             if (alertMsg != null){
                 // Show alert MSG box to the user, warning them should fix the input
-                // this.$toast.open({
-                //     message: alertMsg,
-                //     type: 'is-danger'
-                // })
+                if(this.inBrowser){
+                    this.$toast.open({
+                        message: alertMsg,
+                        type: 'is-danger'
+                    })
+                }
                 // stop the function, because the data is invalid
                 return "Data is not appropriate"
             }
             // show success msg box to tell user, their request is success!
-            // this.$toast.open({
-            //     message: 'Your Request has been submited! Please come to Instrument room to get your instrument when you are free!',
-            //     type: 'is-success'
-            // })
+            if(this.inBrowser){
+                this.$toast.open({
+                    message: 'Your Request has been submited! Please come to Instrument room to get your instrument when you are free!',
+                    type: 'is-success'
+                })
+            }
             // then reset the input data
             this.resetValues()
             // After one second, go back to the home page
-            // setTimeout( () => this.$router.push('/'),1000)
+            setTimeout( () => this.$router.push('/'),1000)
             return "Data is Valid"
         },
         resetValues(){

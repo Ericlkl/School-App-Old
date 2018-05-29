@@ -46,9 +46,7 @@ export default {
     background-color: aliceblue;
     border:1px solid white !important;
 }
-.hero-body{
-   
-}
+
 .fix{
     background-color:#ecf0f1;
     margin-top:-50px;
