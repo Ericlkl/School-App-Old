@@ -1,5 +1,12 @@
 import Vue from 'vue'
 
+// setup JSDOM
+require('jsdom-global')()
+require('es6-promise').polyfill();
+
+// make expect available globally
+global.expect = require('expect')
+
 Vue.config.productionTip = false
 
 // require all test files (files that ends with .spec.js)

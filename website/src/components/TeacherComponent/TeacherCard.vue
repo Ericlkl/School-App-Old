@@ -50,8 +50,6 @@ export default {
       // pass the tutor object Using Vuex to store the data in global
       this.$store.state.specific.tutor = this.tutor
       // Then go to teacherProfile page
-      console.log("Success")
-      console.log(this.$store.state.specific.tutor)
       this.$router.push('teacherProfile')
     }
   }
