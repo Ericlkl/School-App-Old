@@ -163,3 +163,34 @@ describe("Testing Courses", ()=>{
 
     })
 })
+
+
+
+
+describe("Testing Instruments", ()=>{
+    it("This should show all instruments available", (done)=>{
+        request(app)
+            .get('/show_instrument')
+            .expect((res)=>{
+                 expect(res.body).to.have.with.lengthOf(4);
+            })
+            .end(done);
+    })
+
+    it("This should insert a new course into db", (done)=>{
+        var inst = {
+            InstrumentName: 'MisterX',
+            Status: 'New',
+            Cost: 100,
+            Description: 'nice one',
+            InStock: 5,
+            Image_URL: 'www.google.com',
+        }
+        request(app)
+            .post('/insert_instrument')
+            .send(inst)
+            .end(done);
+
+    })
+})
+
