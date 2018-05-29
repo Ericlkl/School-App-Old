@@ -142,6 +142,8 @@ export default {
                     message: 'The request has been sumbited',
                     type: 'is-success'
                 })
+                // After one second, go back to the home page
+                setTimeout( () => this.$router.push('/'),1000)
 
             } catch (error){
                 // show Alert box when it is Failed insert data to database!

@@ -93,6 +93,8 @@ export default {
             })
             // then reset the input data
             this.resetValues()
+            // After one second, go back to the home page
+            setTimeout( () => this.$router.push('/'),1000)
         },
         showAlertMsg(msg){
             this.$toast.open({

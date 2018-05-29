@@ -1,4 +1,5 @@
 // Regular Express for Email format
+
 var emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
 // Regular Expression for only accept numbers
 var numbersOnlyRegex = /^[0-9]*$/
@@ -6,7 +7,6 @@ var numbersOnlyRegex = /^[0-9]*$/
 var letter_space_Regex = /^[a-zA-Z_ ]*$/
 
 var letters_only_Regex = /^[a-zA-Z]*$/
-
 
 
 export default {
@@ -38,11 +38,13 @@ export default {
         return alertMsg
 
     },
+
     checkHireInstrumentForm : function(dataPackage){
 
           // Create Date Object for comparing start and end date
           var start = new Date(dataPackage.startDate)
           var end = new Date(dataPackage.endDate)
+
 
             /*
                 Initialise the alertMsg variable, it is used to pass the text string to alret the user
@@ -67,6 +69,7 @@ export default {
           return alertMsg
 
     },
+
     checkEnrolForm : function(dataPackage) {
 
       /*
@@ -110,4 +113,35 @@ export default {
 
       return alertMsg
     },
+    checkBecomeTutorForm : function (dataPackage) {
+
+          /*
+              Initialise the alertMsg variable, it is used to pass the text string to alret the user
+              their information in incorrect
+          */
+          // Check Terms and Condition box is ticked
+
+        // Check email is Valid
+        var alertMsg = (!emailRegex.test(dataPackage.email)) ? "Invalid emaill format detected! Please Correct it!" : null
+
+        alertMsg = (dataPackage.email.length === 0) ? "Please insert Your Email Address!" : alertMsg
+
+        alertMsg = (dataPackage.interested === '') ? "Please your interested in !" : alertMsg
+        alertMsg = (dataPackage.qualifications === '') ? "Please select Your Qualification!" : alertMsg
+
+        // Check gender is Valid
+        alertMsg = (dataPackage.gender === '') ? "Please Select Gender!" : alertMsg
+
+        // Check lastname is Valid
+        alertMsg = (!letters_only_Regex.test(dataPackage.lastName)) ? "last name is invalid! Only accept english letter!" : alertMsg
+        alertMsg = (dataPackage.lastName.length === 0) ? "Please insert Your last Name!" : alertMsg
+
+
+        // Check firstname is Valid
+        alertMsg = (!letters_only_Regex.test(dataPackage.firstName)) ? "First name is invalid! Only accept english letter!" : alertMsg
+        alertMsg = (dataPackage.firstName.length === 0) ? "Please insert Your First Name!" : alertMsg
+
+        return alertMsg
+    },
+
 }

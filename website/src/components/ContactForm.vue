@@ -64,6 +64,7 @@ import ValidationController from '../../checkValidation/ValidationController'
                 this.dataPackage.message =  ''
                 return "resetSuccessfully"
             },
+            
             async uploadQuestion() {
 
                 const alertMsg = ValidationController.checkContactUsForm(this.dataPackage)
@@ -93,6 +94,9 @@ import ValidationController from '../../checkValidation/ValidationController'
                     })
                     // At the end, clear the data in input field
                     this.resetInputField()
+                    // after one second, go back to the home page
+                    setTimeout( () => this.$router.push('/'),1000)
+
                 } catch (error){
                     // show Alert box when it is Failed insert data to database!
                     console.log("Can not upload the data, Connection Problem")
