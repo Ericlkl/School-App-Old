@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "./node_modules/nodemon/bin/nodemon.js src/app.js --exec 'npm run lint && node'",
-    "lint": "./node_modules/.bin/eslint **/*.js"
+    "lint": "./node_modules/.bin/eslint **/*.js",
+    "test": "mocha **/*.test.js",
+    "test-watch": "nodemon --exec 'npm test'"
   },
   "author": "Lee KA LONG (Eric) and Stas",
   "license": "ISC",
@@ -14,14 +16,17 @@
     "cors": "^2.8.4",
     "eslint": "^4.19.1",
     "execsql": "0.0.3",
+    "expect": "^23.0.1",
     "express": "^4.16.3",
     "joi": "^13.3.0",
+    "mocha": "^5.2.0",
     "morgan": "^1.9.0",
     "mysql": "^2.15.0",
     "mysql2": "^1.5.3",
     "nodemon": "^1.17.4",
     "sequelize": "^4.37.7",
-    "sqlite3": "^4.0.0"
+    "sqlite3": "^4.0.0",
+    "supertest": "^3.1.0"
   },
   "devDependencies": {
     "eslint-config-standard": "^11.0.0",

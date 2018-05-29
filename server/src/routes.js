@@ -1,3 +1,4 @@
+/* eslint-disable */
 // Sequelize function for submit question to database
 const QuestionController = require('./controllers/QuestionController')
 // Sequelize function for insert teacher information to DB or get information from DB
@@ -17,6 +18,9 @@ module.exports = (app) => {
      You can copy the json from testing.json file in the root folder
      to post the information using postman, to test the page
   */
+  app.get('/', (req, res)=>{
+      res.send("hello world");
+  });
 
   // route for contact us page to submit their question to the database
   app.post('/contact', QuestionController.leave_question)
