@@ -6,8 +6,8 @@ import store from './store/store'
 import Buefy from 'buefy'
 import 'buefy/lib/buefy.min.css'
 
+require('es6-promise/auto');
 require("babel-core/register");
-// require("babel-polyfill");
 
 
 Vue.use(Buefy)

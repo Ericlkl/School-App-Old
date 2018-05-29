@@ -16,8 +16,6 @@
 
 export default {
     props:["img","title", "location","time", "entry"]
-
-  
 }
 </script>
 <style scoped>
