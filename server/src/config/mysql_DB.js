@@ -6,6 +6,7 @@ var con = mysql.createConnection({
   host: config.db.options.host,
   user: config.db.user,
   password: config.db.password,
+  logging: false,
 
 })
 

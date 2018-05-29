@@ -14,7 +14,7 @@ const cors = require('cors')
 const morgan = require('morgan')
 const {sequelize} = require('./models')
 
-app.use(morgan('combined'))
+
 app.use(bodyParser.json())
 app.use(cors())
 
@@ -23,7 +23,7 @@ require('./routes')(app)
  // eslint-disable-line
 setTimeout(function () { 
   sequelize
-  .sync().catch(function (err) {
+  .sync({logging: false}).catch(function (err) {
       console.log(err);
   })
   .then(() => {

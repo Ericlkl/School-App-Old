@@ -26,9 +26,11 @@ module.exports = (app) => {
   app.post('/contact', QuestionController.leave_question)
 
   // route for insert Teacher information to the database easily
+  // THIS ROUTE HAS BEEN TESTED
   app.post('/insert_teacher', TeacherController.insert_Teacher)
 
   // route for pass the tutors information from database to get_tutors page
+  // THIS ROUTE HAS BEEN TESTED
   app.get('/show_tutors', TeacherController.select_all_teacher)
 
   // route for insert event information to the database easily

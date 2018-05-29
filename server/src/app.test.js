@@ -6,6 +6,8 @@ const request = require('supertest');
 var expect = require('chai').expect
 var app = require('./app.js').app;
 const {Teacher} = require('./models')
+const {Question} = require('./models')
+
 it('should retrun hello world', (done)=>{
         request(app)
             .get('/')
@@ -20,12 +22,11 @@ it('should retrun hello world', (done)=>{
 
 
 describe('Checking teachers....', ()=>{
-
     it('This should check the length of teachers array', (done)=>{
                 request(app)
                     .get('/show_tutors')
                     .expect((res)=>{
-                        expect(res.body).to.have.with.lengthOf(7);
+                        expect(res.body).to.have.with.lengthOf(8);
                     })
                     .end(done);
                     
@@ -55,14 +56,13 @@ describe('Checking teachers....', ()=>{
                     
     })
 
-
     it('Should insert teacher into the database', (done)=>{
                 var newTeacher = {
                         FirstName: 'Gregstam',
                         LastName: 'Crooker',
                         PhoneNumber: "3123123123",
                         Address: "welcome street",
-                        Email: 'welcome@hotmail.com',
+                        Email: 'welcomse@hotmail.com',
                         Qualification: "Diploma",
                         Good_at: "Violin",
                         Personal_Description: "Warm guy",
@@ -73,12 +73,29 @@ describe('Checking teachers....', ()=>{
                         Gender: 'Male'
                 }
                 request(app)
-                    .post('/insert_teacher')
-                    .expect((newTeacher)=>{             
-                    })
-                    .end(done);
+                        .post('/insert_teacher')
+                        .send(newTeacher)
+                        .expect((res)=>{ 
+                            console.log("Submitted succsesfully");
+                        })
+                        .end(done)
                     
     })
 })
-
-
+describe("Checking contact form", ()=>{
+    it('Should submit the form to database',(done)=>{
+        var message = {
+            FullName: 'MisterX',
+            Email: 'misterx@hotmail.com',
+            PhoneNumber: 12312312,
+            Message: 'Mister x came here',
+        }
+        request(app)
+            .post('/contact')
+            .send(message)
+            .expect((res)=>{
+                console.log("Submitted succsesfully");
+            })
+            .end(done);
+    })
+})

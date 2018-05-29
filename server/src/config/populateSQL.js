@@ -7,7 +7,8 @@ var con = mysql.createConnection({
   host: config.db.options.host,
   user: config.db.user,
   password: config.db.password,
-  database: config.db.database
+  database: config.db.database,
+  logging: false
 })
 let super_script = `
 -- Course
