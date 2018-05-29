@@ -23,7 +23,8 @@ require('./routes')(app)
  // eslint-disable-line
 setTimeout(function () { 
   sequelize
-  .sync({logging: false}).catch(function (err) {
+  .sync({logging: false,
+          force: true}).catch(function (err) {
       console.log(err);
   })
   .then(() => {

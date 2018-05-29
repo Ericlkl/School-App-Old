@@ -26,7 +26,7 @@ describe('Checking teachers....', ()=>{
                 request(app)
                     .get('/show_tutors')
                     .expect((res)=>{
-                        expect(res.body).to.have.with.lengthOf(8);
+                        expect(res.body).to.have.with.lengthOf(6);
                     })
                     .end(done);
                     
@@ -82,6 +82,7 @@ describe('Checking teachers....', ()=>{
                     
     })
 })
+
 describe("Checking contact form", ()=>{
     it('Should submit the form to database',(done)=>{
         var message = {
@@ -95,6 +96,18 @@ describe("Checking contact form", ()=>{
             .send(message)
             .expect((res)=>{
                 console.log("Submitted succsesfully");
+            })
+            .end(done);
+    })
+})
+
+
+describe("Testing events routes", ()=>{
+    it("This should show all events around", (done)=>{
+        request(app)
+            .get('/show_events')
+            .expect((res)=>{
+                 expect(res.body).to.have.with.lengthOf(4);
             })
             .end(done);
     })
