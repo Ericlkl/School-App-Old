@@ -40,7 +40,6 @@ describe('Announcment', () => {
     it('Can shows the Announcment information on the card Component', () => {
 
         expect(wrapper.html()).to.contains(`${wrapper.vm.title}`)
-
         expect(wrapper.html()).to.contains(`${wrapper.vm.location}`)
         expect(wrapper.html()).to.contains(`${wrapper.vm.time}`)
         expect(wrapper.html()).to.contains(`${wrapper.vm.entry}`)

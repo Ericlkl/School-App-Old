@@ -96,6 +96,7 @@ import ValidationController from '../../checkValidation/ValidationController'
                     this.resetInputField()
                     // after one second, go back to the home page
                     setTimeout( () => this.$router.push('/'),1000)
+                    return "Success"
 
                 } catch (error){
                     // show Alert box when it is Failed insert data to database!
