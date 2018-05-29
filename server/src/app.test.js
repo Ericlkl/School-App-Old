@@ -194,3 +194,27 @@ describe("Testing Instruments", ()=>{
     })
 })
 
+describe("Testing students", ()=>{
+    it("This should create a new student", (done)=>{
+        var student = {
+            FirstName: 'asdasd',
+            LastName: 'Czxczxcr',
+            Gender: "Male",
+            Address: "weasdzxcreet",
+            PhoneNumber: "3123123123",
+            Email: 'welcoasdsd@hotmail.com',
+            Facebook_ID: "hey",
+            ParentName: "Mistasd",
+            Parent_Phone_Number: 3123123,             
+        }
+        request(app)
+            .post('/insert_Student')
+            .send(student)
+              .expect((res)=>{
+                 console.log(res)
+            })
+            .end(done);
+
+    })
+})
+
