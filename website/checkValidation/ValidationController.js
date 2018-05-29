@@ -1,4 +1,5 @@
 // Regular Express for Email format
+
 var emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
 // Regular Expression for only accept numbers
 var numbersOnlyRegex = /^[0-9]*$/
@@ -6,7 +7,6 @@ var numbersOnlyRegex = /^[0-9]*$/
 var letter_space_Regex = /^[a-zA-Z_ ]*$/
 
 var letters_only_Regex = /^[a-zA-Z]*$/
-
 
 
 export default {
@@ -38,11 +38,13 @@ export default {
         return alertMsg
 
     },
+
     checkHireInstrumentForm : function(dataPackage){
 
           // Create Date Object for comparing start and end date
           var start = new Date(dataPackage.startDate)
           var end = new Date(dataPackage.endDate)
+
 
             /*
                 Initialise the alertMsg variable, it is used to pass the text string to alret the user
@@ -67,6 +69,7 @@ export default {
           return alertMsg
 
     },
+
     checkEnrolForm : function(dataPackage) {
 
       /*

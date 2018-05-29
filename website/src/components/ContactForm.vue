@@ -64,6 +64,7 @@ import ValidationController from '../../checkValidation/ValidationController'
                 this.dataPackage.message =  ''
                 return "resetSuccessfully"
             },
+            
             async uploadQuestion() {
 
                 const alertMsg = ValidationController.checkContactUsForm(this.dataPackage)
