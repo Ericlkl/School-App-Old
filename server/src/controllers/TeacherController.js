@@ -12,6 +12,9 @@ module.exports = {
     }
   },
 
+  // hard to say what kind of object returned
+  //  need to do display it in the better format
+
   async select_all_teacher (req, res) {
     try {
       const teacher = await Teacher.findAll()
