@@ -1,6 +1,7 @@
 const {Teacher} = require('../models')
 
 module.exports = {
+  // needed to leave comments of what kind of object is send, how does it even look like
   async insert_Teacher (req, res) {
     try {
       const teacher = await Teacher.create(req.body)
