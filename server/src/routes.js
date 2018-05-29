@@ -19,7 +19,7 @@ module.exports = (app) => {
      to post the information using postman, to test the page
   */
   app.get('/', (req, res)=>{
-      res.send("hello world");
+      res.send("Hello world");
   });
 
   // route for contact us page to submit their question to the database

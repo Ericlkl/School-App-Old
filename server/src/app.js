@@ -5,7 +5,7 @@ const app = express()
 
 // config data for create Database for Squelize
 const config = require('./config/config')
-require('expect')
+
 // Create MySql Database if it is not exist
 require('./config/mysql_DB')
 // process JSON File
