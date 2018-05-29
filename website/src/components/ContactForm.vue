@@ -62,22 +62,21 @@ import ValidationController from '../../checkValidation/ValidationController'
                 this.dataPackage.phonenumber =  ''
                 this.dataPackage.email =  ''
                 this.dataPackage.message =  ''
-                this.dataPackage.isValid = false
+                return "resetSuccessfully"
             },
-            showAlertMsg(msg){
-                this.$toast.open({
-                    message: msg,
-                    type: 'is-danger'
-                })
-            },
-
+            
             async uploadQuestion() {
 
                 const alertMsg = ValidationController.checkContactUsForm(this.dataPackage)
 
                 if (alertMsg != null){
-                    this.showAlertMsg(alertMsg)
-                    return 
+                    //show alert Msg box
+                    this.$toast.open({
+                        // print the alert message
+                        message: alertMsg,
+                        type: 'is-danger'
+                    })
+                    return "text is invalid"
                 }
 
                 try {
@@ -97,8 +96,12 @@ import ValidationController from '../../checkValidation/ValidationController'
                     this.resetInputField()
                 } catch (error){
                     // show Alert box when it is Failed insert data to database!
-                    this.showAlertMsg(error.response.data.error)
-                    this.isValid = false
+                    console.log("Can not upload the data, Connection Problem")
+                    this.$toast.open({
+                        message: "Can not upload the data, Connection Problem",
+                        type: 'is-danger'
+                    })
+                    return "Connection Fail"
                 }  
             }
         }

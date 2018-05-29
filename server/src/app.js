@@ -2,6 +2,7 @@
 
 const express = require('express')
 const app = express()
+
 // config data for create Database for Squelize
 const config = require('./config/config')
 
@@ -27,7 +28,9 @@ setTimeout(function () {
   })
   .then(() => {
     app.listen(config.port)
+
     console.log(`Server started on port ${config.port}`)
   })
 }, 1000)
 
+   module.exports.app = app;
