@@ -110,4 +110,35 @@ export default {
 
       return alertMsg
     },
+    checkBecomeTutorForm : function (dataPackage) {
+
+          /*
+              Initialise the alertMsg variable, it is used to pass the text string to alret the user
+              their information in incorrect
+          */
+          // Check Terms and Condition box is ticked
+
+        // Check email is Valid
+        var alertMsg = (!emailRegex.test(dataPackage.email)) ? "Invalid emaill format detected! Please Correct it!" : null
+
+        alertMsg = (dataPackage.email.length === 0) ? "Please insert Your Email Address!" : alertMsg
+
+        alertMsg = (dataPackage.interested === '') ? "Please your interested in !" : alertMsg
+        alertMsg = (dataPackage.qualifications === '') ? "Please select Your Qualification!" : alertMsg
+
+        // Check gender is Valid
+        alertMsg = (dataPackage.gender === '') ? "Please Select Gender!" : alertMsg
+
+        // Check lastname is Valid
+        alertMsg = (!letters_only_Regex.test(dataPackage.lastName)) ? "last name is invalid! Only accept english letter!" : alertMsg
+        alertMsg = (dataPackage.lastName.length === 0) ? "Please insert Your last Name!" : alertMsg
+
+
+        // Check firstname is Valid
+        alertMsg = (!letters_only_Regex.test(dataPackage.firstName)) ? "First name is invalid! Only accept english letter!" : alertMsg
+        alertMsg = (dataPackage.firstName.length === 0) ? "Please insert Your First Name!" : alertMsg
+
+        return alertMsg
+    },
+
 }
