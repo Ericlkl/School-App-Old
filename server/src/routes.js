@@ -58,7 +58,7 @@ module.exports = (app) => {
   //THIS ROUTE HAS BEEN TESTED
   app.get('/show_instrument', InstrumentController.select_all_instrument)
 
-
+  //WAS TESTED
   // route for insert Student information to the database easily
   app.post('/insert_Student', StudentController.insert_Student)
 }
