@@ -113,6 +113,7 @@ export default {
                 facebook: '',
                 termsChecked: false,
             },
+            inBrowser: true
         }
     },
     methods: {
@@ -120,8 +121,13 @@ export default {
             const alertMsg = ValidationController.checkEnrolForm(this.dataPackage)
 
             if (alertMsg != null){
-                this.showAlertMsg(alertMsg)
-                return
+                if(this.inBrowser){
+                    this.$toast.open({
+                    message: alertMsg,
+                    type: 'is-danger'
+                    })
+                }
+                return "Data is not appropriate"
             }
             try {
                 // Pass information to port 8081, then update database
@@ -138,24 +144,27 @@ export default {
                 })
 
                 // Show success Msg
-                this.$toast.open({
-                    message: 'The request has been sumbited',
-                    type: 'is-success'
-                })
+                if(this.inBrowser){
+                    this.$toast.open({
+                        message: 'The request has been sumbited',
+                        type: 'is-success'
+                    })
+                }
                 // After one second, go back to the home page
-                setTimeout( () => this.$router.push('/'),1000)
+                // setTimeout( () => this.$router.push('/'),1000)
+                return "Send Data Successfully"
 
             } catch (error){
                 // show Alert box when it is Failed insert data to database!
-                this.showAlertMsg(error.response.data.error)
+                if(this.inBrowser){
+                    this.$toast.open({
+                    message: "Connection fail",
+                    type: 'is-danger'
+                    })
+                }
+                return "Connection Fail"
             }  
-        },
-        showAlertMsg(msg){
-            this.$toast.open({
-                message: msg,
-                type: 'is-danger'
-            })
-        } // end of showAlertMsg function
+        }
     }
 }
 </script>

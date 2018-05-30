@@ -54,15 +54,10 @@ export default {
                 this.received.instrumentList = (await Connection.getInstrumentsInfo()).data
                 // calculate how many instrument do we have
                 this.num_of_instruments = this.received.instrumentList.length
-                console.log(this.received.instrumentList)
+                return "Connection Success"
             } catch (error){
-                console.log(error)
+                return "Connection Fail"
             }
-        }
-    },
-    watch : {
-        received: function(val) {
-            this.received = val
         }
     },
     mounted() {

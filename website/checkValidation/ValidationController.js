@@ -133,12 +133,11 @@ export default {
         alertMsg = (dataPackage.gender === '') ? "Please Select Gender!" : alertMsg
 
         // Check lastname is Valid
-        alertMsg = (!letters_only_Regex.test(dataPackage.lastName)) ? "last name is invalid! Only accept english letter!" : alertMsg
+        alertMsg = (!letter_space_Regex.test(dataPackage.lastName)) ? "last name is invalid! Only accept english letter!" : alertMsg
         alertMsg = (dataPackage.lastName.length === 0) ? "Please insert Your last Name!" : alertMsg
 
-
         // Check firstname is Valid
-        alertMsg = (!letters_only_Regex.test(dataPackage.firstName)) ? "First name is invalid! Only accept english letter!" : alertMsg
+        alertMsg = (!letter_space_Regex.test(dataPackage.firstName)) ? "First name is invalid! Only accept english letter!" : alertMsg
         alertMsg = (dataPackage.firstName.length === 0) ? "Please insert Your First Name!" : alertMsg
 
         return alertMsg

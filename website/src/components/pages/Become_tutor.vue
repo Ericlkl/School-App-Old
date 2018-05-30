@@ -92,7 +92,8 @@ export default {
                     qualifications : "",
                     interested: "",
                     email : ""
-                }
+                },
+                inBrowser: true
             }
         },
     methods:{
@@ -101,22 +102,25 @@ export default {
             const alertMsg = ValidationController.checkBecomeTutorForm(this.data_package)
 
             if (alertMsg != null) {
-                this.$toast.open({
-                    message: alertMsg,
-                    type: 'is-danger'
-                })
+                if(this.inBrowser){
+                    this.$toast.open({
+                        message: alertMsg,
+                        type: 'is-danger'
+                    })
+                }
                 return "Data is not appropriate"
             }
 
+            if (this.inBrowser){
                 this.$toast.open({
                     message: 'The form has been submited',
                     type: 'is-success'
                 })
-                
-                setTimeout( () => this.$router.push('/'),1000)
-
-                return "Send Data Successfully"
             }
+
+            setTimeout( () => this.$router.push('/'),1000)
+            return "Send Data Successfully"
+        }
     }
   
 }

@@ -12,7 +12,7 @@
       </section>
       <div class="main-content">
           <div class="flex-cards">
-                 <CourseCard v-for = "x in num_of_Event" :key="x.id" :event="received.courseList[x-1]" />
+                 <CourseCard v-for = "x in num_of_Course" :key="x.id" :course="received.courseList[x-1]" />
           </div>     
       </div>
       <Footer/>
@@ -34,29 +34,23 @@ export default {
     data() {
       return {
         received: {},
-        num_of_Event: 0
+        num_of_Course: 0
       }
     },
     methods: {
       async getInfo() {
           try {
             this.received.courseList = (await Connection.getCoursesInfo() ).data
-            this.num_of_Event = this.received.courseList.length
-            console.log(this.received.courseList)
+            this.num_of_Course = this.received.courseList.length
+            return "Connection success"
           } catch(error){
-            console.log(error)
+            return "Connection Fail"
           }
-      }
-    },
-    watch : {
-      received: function(val){
-        this.received = val
       }
     },
     mounted() {
       this.getInfo()
     }
-
 }
 </script>
 <style scoped>

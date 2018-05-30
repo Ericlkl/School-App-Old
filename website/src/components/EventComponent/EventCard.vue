@@ -29,12 +29,7 @@
 
 <script>
     export default {
-        props: ['event'],
-        watch: {
-            event: function(value){
-                this.event = value
-            }
-        }
+        props: ['event']
     }
 </script>
 <style scoped>

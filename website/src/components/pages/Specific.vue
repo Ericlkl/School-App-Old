@@ -24,15 +24,13 @@
                         <button class="button is-info is-filled">Make an Enquire</button>
                         </router-link>
                         <br>
-                        <!-- You can click the button to test showing the form -->
-                        <button @click="register()" class="button is-success is-filled">Join Course</button>
                     </div>
                 </div>
             </div>
         </div>
         <br>
         <!-- Register Form Part -->
-        <div v-if="show" class="container">
+        <div class="container">
             <EnrolForm />
         </div>
       <Footer/>
@@ -57,18 +55,7 @@ export default {
         Descriptionbox,
         Tutionbox,
         EnrolForm
-    },
-    data: function() {
-        return {
-            show: false
-        }
-    },
-    methods: {
-        register: function(){
-            this.show = !this.show
-        }
     }
-  
 }
 </script>
 <style scoped>
