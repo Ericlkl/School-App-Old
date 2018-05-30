@@ -8,6 +8,11 @@ const wrapper = mount(Courses)
 
 
 describe('Courses', () => {
+    it('EXpected mounted method should call when the component created', () => {
+    wrapper.vm.$mount()
+    expect(typeof wrapper.vm.$mount()).to.equal('object')
+    }),
+
 
     it('should allowed to pass the data to component', () => {
         expect(wrapper.vm.num_of_Course).to.equal(4)

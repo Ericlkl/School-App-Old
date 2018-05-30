@@ -24,5 +24,14 @@ wrapper.setData({
 describe('InstrumentCard', () => {
     it('goToHireInstrument function should direct to hire_instrument Page', () => {
         expect(wrapper.vm.goToHireInstrument()).to.equal("In hire instrument page")
+        expect(wrapper.vm.inBrowser).to.equal(false)
+    }),
+    it('Can shows the Instrument information on the card Component', () => {
+        expect(wrapper.html()).to.contains(`${wrapper.vm.instrument.InstrumentName}`)
+        expect(wrapper.html()).to.contains(`${wrapper.vm.instrument.Status}`)
+        expect(wrapper.html()).to.contains(`${wrapper.vm.instrument.Cost}`)
+        expect(wrapper.html()).to.contains(`${wrapper.vm.instrument.InStock}`)
+
     })
+
 })

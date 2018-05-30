@@ -43,7 +43,8 @@ describe('EnrolForm', () => {
     it('submit_to_DB function should send data to database, if data is valid', async () => {
             const result = await wrapper.vm.submit_to_DB()
             // Need to fix later !!!!! it should be success !!!!!
-            expect(result).to.equal("Connection Fail")
+            expect(result).to.equal('Connection Fail')
+
     }),
 
     it('success function should not send data to database, if data is invalid', async () => {

@@ -98,7 +98,7 @@ import ValidationController from '../../checkValidation/ValidationController'
                         })
                     }
                     // At the end, clear the data in input field
-                    this.resetInputField()
+                    const msg = this.resetInputField()
                     // after one second, go back to the home page
                     setTimeout( () => this.$router.push('/'),1000)
                     return "Connection Success"

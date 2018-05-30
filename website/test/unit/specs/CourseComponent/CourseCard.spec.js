@@ -21,6 +21,10 @@ const wrapper = shallowMount(CourseCard, {
     }
 })
 
+wrapper.setData({
+    inBrowser: false
+})
+
 describe('CourseCard', () => {
 
 
@@ -51,6 +55,9 @@ describe('CourseCard', () => {
         expect(wrapper.html()).to.contains(`${wrapper.vm.course.Day}`)
         expect(wrapper.html()).to.contains(`${wrapper.vm.course.Teacher}`)
 
+    }),
+    it('goCoursePage should direct User to course specific page', () => {
+      expect(wrapper.vm.goCoursePage()).to.equal("In Course Specfic page")
     })
 
 })

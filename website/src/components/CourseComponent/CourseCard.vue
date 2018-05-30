@@ -1,6 +1,5 @@
 <template>
-    <div class = "card">
-        <router-link :to = "{name: 'specific'}">
+    <div @click="goCoursePage" class = "card">
         <img v-bind:src="course.Image_URL">
         <div class="text">
             <h4 class='subtitle is-5'>{{course.CourseName}}</h4>
@@ -10,14 +9,26 @@
             <h4>Student: {{course.NumbersOfStudent}}</h4>
             <p>By {{course.Teacher}}</p>   
         </div>
-    </router-link>
-  </div>
+        </div>
 </template>
 <script>
 
 
 export default {
-  props: ['course']  
+  data(){
+      return {
+        inBrowser: true
+      }
+  },
+  props: ['course'],
+  methods: {
+      goCoursePage: function(){
+          if(this.inBrowser){
+            this.$router.push('/course-specific')
+          }
+          return "In Course Specfic page"
+      }
+  }
 }
 </script>
 <style scoped>

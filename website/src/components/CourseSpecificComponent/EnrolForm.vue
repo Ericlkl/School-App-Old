@@ -123,7 +123,7 @@ export default {
             if (alertMsg != null){
                 if(this.inBrowser){
                     this.$toast.open({
-                    message: msg,
+                    message: alertMsg,
                     type: 'is-danger'
                     })
                 }

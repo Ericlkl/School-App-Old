@@ -39,13 +39,22 @@
 <script>
 
 export default {
+  data(){
+    return {
+      inBrowser: true
+    }
+  },
   props: ['tutor'],
   methods: {
     goToTeacherProfile() {
-      // pass the tutor object Using Vuex to store the data in global
-      this.$store.state.specific.tutor = this.tutor
-      // Then go to teacherProfile page
-      this.$router.push('teacherProfile')
+      if (this.inBrowser){
+        // pass the tutor object Using Vuex to store the data in global
+        this.$store.state.specific.tutor = this.tutor
+        // Then go to teacherProfile page
+        this.$router.push('teacherProfile')
+      }
+
+      return "In Teacher Profile Page"
     }
   }
 }
