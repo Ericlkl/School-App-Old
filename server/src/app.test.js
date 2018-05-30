@@ -5,8 +5,6 @@
 const request = require('supertest');
 var expect = require('chai').expect
 var app = require('./app.js').app;
-const {Teacher} = require('./models')
-const {Question} = require('./models')
 
 it('should retrun hello world', (done)=>{
         request(app)
@@ -15,9 +13,20 @@ it('should retrun hello world', (done)=>{
             .end(done);    
 })
 
+// WHEN doing tests need to run "npm test"
+//At first all test cases will fail because data has to be written to database first
+// so
+//1) run "npm start" and need to see "Inserction complete" in the console
+//2) After that repeat and run "npm start" and all tests should pass
 
+//The reason for this problem because of the way how sequalise and Mysql is setup
+// was too late to change things around because of the way everything was structuted,
+//so the only reasonable solution was to setTimeout to create the DB first 
+// and then populate it after 5 seconds
 
-
+//IMPORTANT
+//SO try to repeat steps 1) and 2) untill you see "Inserion complete" on the console
+//once u saw it, the next 'npm test" should be without any problems
 
 
 
@@ -28,6 +37,7 @@ describe('Checking teachers....', ()=>{
                     .expect((res)=>{
                         expect(res.body).to.have.with.lengthOf(6);
                     })
+                    .expect(200)
                     .end(done);
                     
     })
@@ -52,6 +62,7 @@ describe('Checking teachers....', ()=>{
                             "Language_skill", "English,Japanese",
                             "Image_URL", "https://segundadivisionweb.files.wordpress.com/2017/04/profesor-de-musica.jpg");
                     })
+                    .expect(200)
                     .end(done);
                     
     })
@@ -78,6 +89,7 @@ describe('Checking teachers....', ()=>{
                         .expect((res)=>{ 
                             console.log("Submitted succsesfully");
                         })
+                        .expect(200)
                         .end(done)
                     
     })
@@ -97,6 +109,7 @@ describe("Checking contact form", ()=>{
             .expect((res)=>{
                 console.log("Submitted succsesfully");
             })
+            .expect(200)
             .end(done);
     })
 })
@@ -109,6 +122,7 @@ describe("Testing events routes", ()=>{
             .expect((res)=>{
                  expect(res.body).to.have.with.lengthOf(4);
             })
+            .expect(200)
             .end(done);
     })
 
@@ -127,6 +141,7 @@ describe("Testing events routes", ()=>{
         request(app)
             .post('/insert_event')
             .send(event)
+            .expect(200)
             .end(done);
     })
 })
@@ -159,6 +174,7 @@ describe("Testing Courses", ()=>{
         request(app)
             .post('/insert_course')
             .send(courses)
+
             .end(done);
 
     })
@@ -189,6 +205,7 @@ describe("Testing Instruments", ()=>{
         request(app)
             .post('/insert_instrument')
             .send(inst)
+            .expect(200)
             .end(done);
 
     })
@@ -210,6 +227,7 @@ describe("Testing students", ()=>{
         request(app)
             .post('/insert_Student')
             .send(student)
+
             .end(done);
 
     })
