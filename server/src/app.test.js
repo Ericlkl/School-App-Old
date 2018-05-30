@@ -210,9 +210,6 @@ describe("Testing students", ()=>{
         request(app)
             .post('/insert_Student')
             .send(student)
-              .expect((res)=>{
-                 console.log(res)
-            })
             .end(done);
 
     })

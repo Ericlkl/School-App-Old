@@ -23,6 +23,6 @@ function createDB () {
  // eslint-disable-line
 setTimeout(function () { 
   require('./populateSQL') 
-}, 5000)
+}, 4000)
 
 module.exports = createDB()
