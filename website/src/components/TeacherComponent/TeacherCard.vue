@@ -46,6 +46,7 @@ export default {
   },
   props: ['tutor'],
   methods: {
+    // Direct user to go to Teacher Profile page
     goToTeacherProfile() {
       if (this.inBrowser){
         // pass the tutor object Using Vuex to store the data in global

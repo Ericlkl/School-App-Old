@@ -2,8 +2,9 @@
     <div class="columns">
         <div class="column is-1"></div>
         <div class="column is-10">
+            <!--  Title -->
             <h2 class="has-text-centered subtitle is-2 fix">Hire Instrument</h2>
-                <!--  Student ID and Student Name field -->
+                <!--  Student ID -->
                 <div class="field is-horizontal"> 
                     <div class="field-label is-normal">
                         <label class="label">Student ID</label>
@@ -16,6 +17,9 @@
                             </p>
                         </div>
 
+                <!-- End of Student ID  -->
+
+                <!-- Student Name field  -->
                     <div class="field-label is-normal">
                         <label class="label">Student Name</label>
                     </div>
@@ -26,7 +30,7 @@
                         </div>
                     </div>
                 </div> 
-                <!-- End of Student ID and Student Name field -->
+                <!-- End of Student Name field -->
 
                 <!--  Date field -->
                 <div class="field is-horizontal"> 
@@ -67,11 +71,13 @@ export default {
     data() {
         return {
             dataPackage: {
+                // The data we need to pass it to Database
                 studentID: '',
                 studentName: '',
                 startDate: null,
                 endDate:null
             },
+            // For unit testing, determine are we in the browser
             inBrowser: true
         }
     },
@@ -85,6 +91,7 @@ export default {
                 // Show alert MSG box to the user, warning them should fix the input
                 if(this.inBrowser){
                     this.$toast.open({
+                        // The pops up message for the user
                         message: alertMsg,
                         type: 'is-danger'
                     })
@@ -95,6 +102,7 @@ export default {
             // show success msg box to tell user, their request is success!
             if(this.inBrowser){
                 this.$toast.open({
+                    // The pops up message for the user
                     message: 'Your Request has been submited! Please come to Instrument room to get your instrument when you are free!',
                     type: 'is-success'
                 })
@@ -103,13 +111,16 @@ export default {
             this.resetValues()
             // After one second, go back to the home page
             setTimeout( () => this.$router.push('/'),1000)
+            // Return Msg if it is success
             return "Data is Valid"
         },
         resetValues(){
+            // Reset All the data 
             this.dataPackage.studentID = ''
             this.dataPackage.studentName = ''
             this.dataPackage.startDate = null
             this.dataPackage.endDate = null
+            // Return Msg if it is success
             return "resetSuccessfully"
         }
     }

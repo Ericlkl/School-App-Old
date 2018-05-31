@@ -1,7 +1,9 @@
+// Import Module for testing
 import Vue from 'vue'
 import EventCard from '@/components/EventComponent/EventCard'
 import {shallowMount} from '@vue/test-utils'
 
+// Create a fake data for testing
 const dummy_event_data = {
   EventName: "Event",
   Tag: "Tag",
@@ -21,9 +23,10 @@ const wrapper = shallowMount(EventCard, {
     }
 })
 
-
+// Describe which Module are we testing
 describe('EventCard', () => {
 
+    // Descibe what is this function testing for
     it('Can read Database data to pass it in props', () => {
 
         /*
@@ -41,6 +44,7 @@ describe('EventCard', () => {
 
 
     }),
+    // Descibe what is this function testing for
     it('Can shows the event information on the card Component', () => {
 
         // It should shows the event image on the card 

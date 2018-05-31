@@ -1,12 +1,14 @@
+// Import Module for testing
 import Vue from 'vue'
 import Contact from '@/components/pages/Contact'
 import {shallowMount} from '@vue/test-utils'
 
-// Create a EventCard Vue Instance for checking
+// Create a Contact us Vue Instance for checking
 const wrapper = shallowMount(Contact)
 
+// Describe which Module are we testing
 describe('Contact', () => {
-
+// Descibe what is this function testing for
     it('shows Pineland Music School Contact information successfully', () => {
         expect(wrapper.html()).to.contains(`Head Office`)
         // It should shows the event image on the card 

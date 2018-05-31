@@ -1,16 +1,22 @@
-// Regular Express for Email format
+// Created by LEE KA LONG (Eric)
+
+/*  
+    Regular Expression Variable
+    It is used to compare with the user input, to match them should following the rules
+        emailRegex: Email address format in Regular Expression
+        numbersOnlyRegex: Regular Expression that only allows number
+        letter_space_Regex: Regular Expression that only allows lower and upper case english letter and white space
+        letters_only_Regex: Regular Expression that only allows lower and upper case letter
+*/
 
 var emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-// Regular Expression for only accept numbers
 var numbersOnlyRegex = /^[0-9]*$/
-// Regular Expression for only accept English letter and space
 var letter_space_Regex = /^[a-zA-Z_ ]*$/
-
 var letters_only_Regex = /^[a-zA-Z]*$/
 
-
+// Return these function for other module
 export default {
-
+    // Function for checking Contact Us Form
     checkContactUsForm : function(dataPackage){
 
         /*
@@ -34,11 +40,12 @@ export default {
         // Testing for name input field, only accept english letter a-z, A-Z and space _ 
         alertMsg = (!letter_space_Regex.test(dataPackage.fullname)) ? "Invaild name detected! Only accept english letter!" : alertMsg
         alertMsg = (dataPackage.fullname.length === 0) ? "Please insert Your Name!" : alertMsg
-
+        
+        // Return Msg back
         return alertMsg
 
     },
-
+    // Function for checking Hire Instrument Form
     checkHireInstrumentForm : function(dataPackage){
 
           // Create Date Object for comparing start and end date
@@ -66,10 +73,11 @@ export default {
           alertMsg = (!numbersOnlyRegex.test(dataPackage.studentID)) ? "Student Number is inValid! It onlt accept numbers!" : alertMsg
           alertMsg = (dataPackage.studentID.length === 0) ? "Please Insert Your Student Number !" : alertMsg
 
+          // Return Msg back
           return alertMsg
 
     },
-
+    // Function for Student Enrollment Form
     checkEnrolForm : function(dataPackage) {
 
       /*
@@ -81,7 +89,6 @@ export default {
 
       // Check Parent Phone Number is valid
       alertMsg = (!numbersOnlyRegex.test(dataPackage.parentPhoneNumber)) ? "parent phone number is invalid! only accept numbers!" : alertMsg
-
       alertMsg = (dataPackage.parentPhoneNumber.length != 9) ? "There must be 9 digit for the parent phone number!" : alertMsg
       alertMsg = (dataPackage.parentPhoneNumber.length === 0) ? "Please Insert Your parent phone Number !" : alertMsg
 
@@ -111,8 +118,11 @@ export default {
       alertMsg = (!letters_only_Regex.test(dataPackage.lastName)) ? "Family name is invalid! Only accept english letter!" : alertMsg
       alertMsg = (dataPackage.lastName.length === 0) ? "Please insert Your Family Name!" : alertMsg
 
+      // Return Msg back
       return alertMsg
     },
+
+    // Function for Tutor Application Form
     checkBecomeTutorForm : function (dataPackage) {
 
           /*
@@ -140,6 +150,7 @@ export default {
         alertMsg = (!letter_space_Regex.test(dataPackage.firstName)) ? "First name is invalid! Only accept english letter!" : alertMsg
         alertMsg = (dataPackage.firstName.length === 0) ? "Please insert Your First Name!" : alertMsg
 
+        // Return Msg back
         return alertMsg
     },
 

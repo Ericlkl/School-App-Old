@@ -1,7 +1,9 @@
+// Import Module for testing
 import Vue from 'vue'
 import Announcment from '@/components/Announc/Announcment'
 import {shallowMount} from '@vue/test-utils'
 
+// Create a fake data for testing
 const dummy_announcment_data = {
     img: "https://blogmedia.evbstatic.com/wp-content/uploads/bloguk/2018/01/15155312/iStock-667709450.jpg",
     title: "title",
@@ -10,7 +12,7 @@ const dummy_announcment_data = {
     entry: 300
 }
 
-// Create a EventCard Vue Instance for checking
+// Create a Announancement Vue Instance for checking
 const wrapper = shallowMount(Announcment, {
     propsData: {
         img: dummy_announcment_data.img,
@@ -21,9 +23,10 @@ const wrapper = shallowMount(Announcment, {
     }
 })
 
-
+// Describe which Module are we testing
 describe('Announcment', () => {
 
+    // Write down the msg, what is this function testing
     it('Can read data to pass it in props', () => {
 
         /*
@@ -37,8 +40,10 @@ describe('Announcment', () => {
 
 
     }),
+    // // Write down the msg, what is this function testing
     it('Can shows the Announcment information on the card Component', () => {
 
+        // The HTML Element should contains the data we Inserted to the page
         expect(wrapper.html()).to.contains(`${wrapper.vm.title}`)
         expect(wrapper.html()).to.contains(`${wrapper.vm.location}`)
         expect(wrapper.html()).to.contains(`${wrapper.vm.time}`)
